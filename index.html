@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Mains Syllabus & PYQ Automated Mapper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans">
+
+    <!-- Header -->
+    <header class="bg-indigo-900 text-white p-4 flex justify-between items-center shadow-md">
+        <div>
+            <h1 class="text-xl font-bold">UPSC Mains PYQ Auto-Mapper</h1>
+            <p class="text-xs text-indigo-200">Zero-upload PYQ mapping for GS1, GS2, GS3 & GS4</p>
+        </div>
+        <div class="flex items-center gap-2">
+            <label for="apiKey" class="text-xs font-medium">API Key:</label>
+            <input type="password" id="apiKey" placeholder="Paste Gemini API Key" class="px-2 py-1 text-sm rounded text-black w-48 border border-gray-300">
+            <button onclick="saveApiKey()" class="bg-indigo-600 hover:bg-indigo-700 text-xs px-3 py-1 rounded">Save</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="flex flex-1 overflow-hidden">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="w-1/4 bg-white border-r border-gray-200 overflow-y-auto p-4">
+            <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Pre-Loaded Syllabus</h2>
+            <div id="syllabusMenu" class="space-y-4"></div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-6 overflow-y-auto bg-gray-50">
+            <div id="welcomeMessage" class="bg-white p-8 rounded-lg shadow border border-gray-200 text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Select a Topic from the Syllabus</h3>
+                <p class="text-sm text-gray-600">Choose any micro-topic from the left menu to automatically view mapped PYQs, recurrent themes, and core dimensions.</p>
+            </div>
+
+            <div id="loading" class="hidden text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-indigo-600 border-t-transparent"></div>
+                <p class="mt-2 text-sm text-gray-600">Analyzing past year questions and syllabus dimensions...</p>
+            </div>
+
+            <div id="output" class="hidden bg-white p-8 rounded-lg shadow border border-gray-200 prose max-w-none">
+                <!-- Generated content renders here -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Pre-loaded UPSC Syllabus Topics Hierarchy
+        const syllabusData = {
+            "GS Paper 1": [
+                "Indian Art, Architecture & Culture",
+                "Modern Indian History & Freedom Struggle",
+                "Post-Independence Consolidation",
+                "World History (Industrial Rev, World Wars)",
+                "Salient Features of Indian Society & Diversity",
+                "Role of Women & Women Organizations",
+                "Poverty & Developmental Issues",
+                "Urbanization: Problems & Remedies",
+                "Globalization & Impact on Indian Society",
+                "Social Empowerment, Communalism, Regionalism",
+                "Physical Geography & Natural Resources Distribution"
+            ],
+            "GS Paper 2": [
+                "Constitutional Amendments & Basic Structure",
+                "Functions & Responsibilities of Union & States",
+                "Issues of Federalism & Centre-State Relations",
+                "Separation of Powers & Dispute Redressal",
+                "Parliament & State Legislatures: Structure & Functioning",
+                "Structure & Functioning of Executive & Judiciary",
+                "Representation of People's Act & Elections",
+                "Appointment to Constitutional & Statutory Bodies",
+                "Government Policies & Interventions in Development",
+                "Welfare Schemes for Vulnerable Sections",
+                "Issues Relating to Health, Education & Human Resources",
+                "Issues Relating to Poverty & Hunger",
+                "E-Governance, Transparency & Accountability",
+                "India and its Neighborhood Relations",
+                "Bilateral, Regional & Global Groupings"
+            ],
+            "GS Paper 3": [
+                "Indian Economy & Mobilization of Resources",
+                "Inclusive Growth & Associated Issues",
+                "Government Budgeting & Fiscal Policy",
+                "Major Crops & Cropping Patterns",
+                "Issues Related to Direct/Indirect Farm Subsidies & MSP",
+                "Public Distribution System (PDS) & Food Security",
+                "Food Processing & Related Industries in India",
+                "Land Reforms in India",
+                "Effects of Liberalization on Economy & Industry",
+                "Infrastructure: Energy, Ports, Roads, Airports, Railways",
+                "Investment Models",
+                "Science & Technology: Developments & Applications",
+                "Indigenization of Technology & New Technologies",
+                "Conservation, Environmental Pollution & Degradation",
+                "Disaster & Disaster Management",
+                "Linkages Between Development & Extremism",
+                "Internal Security: Cyber Security & Social Media",
+                "Money Laundering & Border Management Issues"
+            ],
+            "GS Paper 4": [
+                "Ethics and Human Interface: Essence, Determinants & Consequences",
+                "Human Values: Lessons from Lives of Great Leaders",
+                "Attitude: Content, Structure, Function & Behavioral Impact",
+                "Aptitude & Foundational Values for Civil Services",
+                "Emotional Intelligence: Concepts & Utilities in Governance",
+                "Contributions of Moral Thinkers (Indian & Western)",
+                "Public/Civil Service Values and Ethics in Public Administration",
+                "Probity in Governance: Transparency & Information Sharing",
+                "Citizen's Charters & Work Culture",
+                "Challenges of Corruption in Administration"
+            ]
+        };
+
+        // Render Menu
+        const menuContainer = document.getElementById("syllabusMenu");
+        for (const [paper, topics] of Object.entries(syllabusData)) {
+            const paperHeader = document.createElement("details");
+            paperHeader.className = "group";
+            paperHeader.open = paper === "GS Paper 2"; // Open GS2 by default
+
+            const summary = document.createElement("summary");
+            summary.className = "flex justify-between items-center font-bold text-gray-800 cursor-pointer p-2 rounded hover:bg-gray-100 text-sm";
+            summary.textContent = paper;
+
+            const topicList = document.createElement("ul");
+            topicList.className = "ml-3 mt-1 space-y-1 border-l-2 border-indigo-100 pl-2";
+
+            topics.forEach(topic => {
+                const li = document.createElement("li");
+                const btn = document.createElement("button");
+                btn.className = "text-left text-xs text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 w-full p-1.5 rounded transition";
+                btn.textContent = topic;
+                btn.onclick = () => fetchPYQAnalysis(paper, topic);
+                li.appendChild(btn);
+                topicList.appendChild(li);
+            });
+
+            paperHeader.appendChild(summary);
+            paperHeader.appendChild(topicList);
+            menuContainer.appendChild(paperHeader);
+        }
+
+        // Local Storage for API Key
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedKey = localStorage.getItem("gemini_api_key");
+            if (savedKey) document.getElementById("apiKey").value = savedKey;
+        });
+
+        function saveApiKey() {
+            const key = document.getElementById("apiKey").value;
+            localStorage.setItem("gemini_api_key", key);
+            alert("API Key saved locally!");
+        }
+
+        // API Call
+        async function fetchPYQAnalysis(paper, topic) {
+            const apiKey = document.getElementById("apiKey").value || localStorage.getItem("gemini_api_key");
+            if (!apiKey) {
+                alert("Please enter a valid Gemini API Key at the top right.");
+                return;
+            }
+
+            document.getElementById("welcomeMessage").classList.add("hidden");
+            document.getElementById("output").classList.add("hidden");
+            document.getElementById("loading").classList.remove("hidden");
+
+            const prompt = `You are a UPSC expert. Analyze the given syllabus topic from ${paper}.
+            Topic: "${topic}"
+            
+            Provide structured response with clean HTML formatting (use <h3>, <ul>, <li>, <strong>, <blockquote>):
+            1. <h3>Syllabus & Micro-Topic Context</h3>
+            2. <h3>Recurrent Themes (3-4 Core Themes)</h3>
+            3. <h3>Key Dimensions to Prepare</h3>
+            4. <h3>Chronological PYQs (2013-Present)</h3>
+            Include year, marks, and exact question text. Rely entirely on your training memory.`;
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+                });
+
+                const data = await response.json();
+                const text = data.candidates[0].content.parts[0].text;
+
+                // Format simple Markdown to HTML
+                let formattedText = text
+                    .replace(/### (.*)/g, '<h3 class="text-lg font-bold text-indigo-900 mt-4 mb-2">$1</h3>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\* (.*)/g, '<li class="ml-4 list-disc text-sm text-gray-700 my-1">$1</li>');
+
+                document.getElementById("output").innerHTML = formattedText;
+                document.getElementById("loading").classList.add("hidden");
+                document.getElementById("output").classList.remove("hidden");
+            } catch (err) {
+                document.getElementById("loading").classList.add("hidden");
+                document.getElementById("output").innerHTML = `<p class="text-red-600 font-semibold">Error generating data. Check your API key or network connection.</p>`;
+                document.getElementById("output").classList.remove("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
