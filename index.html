@@ -190,26 +190,37 @@
             }
         }
 
-        // Dynamically find a working model from Google
+        // Dynamically find an active, non-deprecated model
         async function getWorkingModel(apiKey) {
             try {
                 const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
                 const data = await res.json();
                 
                 if (res.ok && data.models) {
-                    // Filter models that support content generation
-                    const genModels = data.models.filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes("generateContent"));
-                    
-                    // Prefer flash models if available
-                    const flashModel = genModels.find(m => m.name.includes("flash"));
-                    if (flashModel) return flashModel.name.replace("models/", "");
-                    
+                    const genModels = data.models.filter(m => 
+                        m.supportedGenerationMethods && 
+                        m.supportedGenerationMethods.includes("generateContent")
+                    );
+
+                    // Prefer stable active models (1.5-flash or 2.0-flash)
+                    const preferred = genModels.find(m => 
+                        m.name.includes("gemini-1.5-flash") || 
+                        m.name.includes("gemini-2.0-flash")
+                    );
+                    if (preferred) return preferred.name.replace("models/", "");
+
+                    // Exclude deprecated model strings like 2.5-flash
+                    const activeFlash = genModels.find(m => 
+                        m.name.includes("flash") && 
+                        !m.name.includes("2.5")
+                    );
+                    if (activeFlash) return activeFlash.name.replace("models/", "");
+
                     if (genModels.length > 0) return genModels[0].name.replace("models/", "");
                 }
             } catch (e) {}
             
-            // Default fallback if listing fails
-            return "gemini-1.5-flash-latest";
+            return "gemini-1.5-flash";
         }
 
         async function fetchPYQAnalysis(paper, topic) {
