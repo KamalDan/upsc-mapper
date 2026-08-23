@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPSC Mains PYQ & Note-Making Mapper (Offline)</title>
+    <title>UPSC Mains Complete Syllabus PYQ & Note-Making Mapper</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 h-screen flex flex-col font-sans">
@@ -11,8 +11,8 @@
     <!-- Header -->
     <header class="bg-indigo-900 text-white p-4 flex flex-col md:flex-row justify-between items-center gap-3 shadow-md">
         <div>
-            <h1 class="text-xl font-bold">UPSC Mains Offline Mapper & Note-Making Tool</h1>
-            <p class="text-xs text-indigo-200">Historical PYQ Dimensions (2013–2025) • Future Note-Making Frameworks</p>
+            <h1 class="text-xl font-bold">UPSC Mains Master Offline Syllabus & PYQ Mapper</h1>
+            <p class="text-xs text-indigo-200">100% Official UPSC Syllabus Coverage (GS 1–4) • Covered Dimensions & Future Note Frameworks</p>
         </div>
         <div class="flex items-center gap-2">
             <span class="bg-emerald-500 text-white text-xs px-3 py-1 rounded-full font-semibold">100% Offline Active</span>
@@ -23,19 +23,19 @@
     <div class="flex flex-col md:flex-row flex-1 overflow-hidden">
         
         <!-- Sidebar Navigation -->
-        <aside class="w-full md:w-1/3 lg:w-1/4 bg-white border-r border-gray-200 overflow-y-auto p-4 max-h-72 md:max-h-full flex flex-col">
+        <aside class="w-full md:w-1/3 lg:w-1/4 bg-white border-r border-gray-200 overflow-y-auto p-4 max-h-80 md:max-h-full flex flex-col">
             <div class="mb-3">
-                <input type="text" id="searchInput" oninput="filterTopics()" placeholder="🔍 Search topic, PYQ, or dimension..." class="w-full p-2 border border-gray-300 rounded text-xs focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                <input type="text" id="searchInput" oninput="filterTopics()" placeholder="🔍 Search syllabus, keyword, or PYQ..." class="w-full p-2 border border-gray-300 rounded text-xs focus:ring-2 focus:ring-indigo-500 focus:outline-none">
             </div>
-            <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Syllabus Modules</h2>
+            <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Complete UPSC Syllabus (GS 1-4)</h2>
             <div id="syllabusMenu" class="space-y-3 flex-1 overflow-y-auto"></div>
         </aside>
 
         <!-- Main Content Area -->
         <main class="flex-1 p-4 md:p-6 overflow-y-auto bg-gray-50">
             <div id="welcomeMessage" class="bg-white p-8 rounded-lg shadow border border-gray-200 text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Select a Topic to View Mapped Dimensions</h3>
-                <p class="text-sm text-gray-600 max-w-lg mx-auto">Click any topic from the sidebar to inspect past covered dimensions, future note-making structures, and mapped PYQs (2013–2025).</p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Complete UPSC Mains Syllabus Mapped</h3>
+                <p class="text-sm text-gray-600 max-w-lg mx-auto">Select any module from the sidebar to inspect historically covered dimensions, note-making blueprints for future exams, and past year questions.</p>
             </div>
 
             <div id="output" class="hidden bg-white p-6 md:p-8 rounded-lg shadow border border-gray-200 prose max-w-none">
@@ -46,9 +46,9 @@
 
     <script>
         const pyqDatabase = {
-            "GS Paper 1: History, Culture, Society & Geography": {
-                "Art, Architecture & Culture": {
-                    themes: ["Temple Architecture Styles (Nagara, Dravida, Vesara)", "Buddhism & Jainism Philosophy & Stupa Art", "Bhakti & Sufi Movement Literature", "Maurya, Gupta & Vijayanagara Heritage"],
+            "GS Paper 1: Indian Heritage, Culture, History & Geography": {
+                "Art Forms, Literature & Architecture (Ancient to Modern)": {
+                    themes: ["Temple Architecture Styles", "Buddhism & Jainism Philosophy", "Bhakti & Sufi Literature", "Maurya, Gupta & Vijayanagara Heritage"],
                     dimensionsCovered: [
                         "Socio-cultural life reflected in temple sculptures & rock-cut cave art",
                         "Foreign travelers' accounts (Chinese, Arab) as historical sources",
@@ -56,7 +56,7 @@
                         "Role of Bhakti literature in regional language evolution"
                     ],
                     noteMakingDimensions: [
-                        "Patronage Matrix: Royal (Kings) vs Guild/Merchant vs Popular patronage across eras",
+                        "Patronage Matrix: Royal vs Guild/Merchant vs Popular patronage across eras",
                         "Foreign Influence vs Indigenous Synthesis (Indo-Islamic, Gandhara, European)",
                         "Preservation & Heritage Management: Modern challenges, ASI initiatives, idol theft",
                         "Philosophical Underpinnings: How school of thought directly shaped artistic form"
@@ -65,157 +65,1321 @@
                         { year: 2024, marks: "10 Marks", text: "Highlight the features of the Gandhara school of art and its contribution to Indian sculpture." },
                         { year: 2023, marks: "10 Marks", text: "Explain the role of the Bhakti movement in the growth of regional languages in India." },
                         { year: 2022, marks: "15 Marks", text: "How will you explain that the medieval Indian temple sculptures represent the social life of those days?" },
-                        { year: 2021, marks: "10 Marks", text: "Evaluate the nature of the Bhakti literature and its contribution to Indian culture." },
-                        { year: 2020, marks: "15 Marks", text: "Rock-cut architecture represents one of the most important sources of our knowledge of early Indian art and history. Discuss." },
-                        { year: 2018, marks: "10 Marks", text: "Assess the importance of the accounts of the Chinese travellers in the reconstruction of the history of India." },
-                        { year: 2013, marks: "10 Marks", text: "Though not very useful from political history, Sangam literature portrays social and economic conditions with remarkable vividness. Comment." }
+                        { year: 2020, marks: "15 Marks", text: "Rock-cut architecture represents one of the most important sources of our knowledge of early Indian art and history. Discuss." }
                     ]
                 },
-                "Modern Indian History & Freedom Struggle": {
-                    themes: ["19th Century Socio-Religious Reforms", "Gandhian Mass Movements", "Constitutional Acts (1909, 1919, 1935)", "Tribal & Peasant Uprisings"],
+                "Modern Indian History (Mid-18th Century to Present)": {
+                    themes: ["Decline of Mughals & British Expansion", "Socio-Religious Reform Movements", "Economic Impact of British Rule", "Colonial Land & Administrative Policies"],
                     dimensionsCovered: [
-                        "Ideological differences among leaders (Gandhi vs Tagore, Bose vs Ambedkar)",
-                        "Socio-economic impact of British colonial policies (Railways, Famines, Deindustrialization)",
-                        "1857 Revolt as a culmination of hundred years of local uprisings",
-                        "Swadeshi & Non-Cooperation Movement dynamics"
+                        "De-industrialization and ruin of traditional handicrafts",
+                        "Role of 19th-century reform movements in generating national identity",
+                        "Drain of Wealth theory and economic critique of colonialism",
+                        "Tribal, peasant, and civil uprisings before 1857"
                     ],
                     noteMakingDimensions: [
-                        "Press & Literature as tools of mobilization: Vernacular newspapers, censorship acts",
-                        "Role of Subaltern Groups: Working class, tribal leaders, grassroots women cadres",
-                        "Capitalist/Business Class Role: Financial backing and limits of support during movements",
-                        "Post-Movement Consolidation: Constructive work periods between active mass struggles"
+                        "Comparative Reform Matrix: Reformist vs Revivalist movements",
+                        "Impact of Western Education & Press: Growth of vernacular journalism",
+                        "Administrative Centralization: Regulating Acts to Charter Acts progression",
+                        "Subaltern Resistance: Unsung leaders in local resistance movements"
                     ],
                     pyqs: [
                         { year: 2024, marks: "15 Marks", text: "Discuss the factors responsible for the rise of national consciousness in India during the late 19th century." },
-                        { year: 2023, marks: "15 Marks", text: "What was the difference between Mahatma Gandhi and Rabindranath Tagore in their approach towards education and nationalism?" },
-                        { year: 2022, marks: "10 Marks", text: "Why was there an uprising in 1857? Main causes, nature, and consequences." },
                         { year: 2021, marks: "15 Marks", text: "Bring out the socio-economic effects of the introduction of railways in different states of India during the 19th century." },
                         { year: 2019, marks: "10 Marks", text: "The 1857 Uprising was the culmination of the recurrent big and small local rebellions. Elucidate." }
                     ]
                 },
-                "Indian Society & Diversity": {
-                    themes: ["Caste, Regionalism & Communalism", "Urbanization & Family Structure Changes", "Women Empowerment & Globalization"],
+                "The Freedom Struggle: Stages, Contributors & Contributions": {
+                    themes: ["Moderates vs Extremists", "Gandhian Movements", "Revolutionary Nationalism", "Subhash Chandra Bose & INA", "Communalism & Partition"],
                     dimensionsCovered: [
-                        "Globalization impact on cultural diversity and women",
-                        "Regionalism vs Anti-nationalism distinction",
-                        "Changing family and marriage institutions",
-                        "Inclusivity gaps in historical women's movements"
+                        "Ideological differences among leaders (Gandhi vs Tagore, Bose vs Ambedkar)",
+                        "Swadeshi, Non-Cooperation, Civil Disobedience, and Quit India movement dynamics",
+                        "Role of women, peasants, and working class in mass mobilization",
+                        "Factors leading to Cabinet Mission, Mountbatten Plan, and Partition"
                     ],
                     noteMakingDimensions: [
-                        "Care Economy & Unpaid Work: Economic recognition of female household labor",
-                        "Urban Slum Dynamics: Migration, informal labor, urban poverty vs social mobility",
-                        "Senior Citizen & Demographic Shift: Aging population issues and silver economy",
-                        "Caste-Class Overlap: How modern economic stratification intersects with traditional caste"
+                        "Constitutional Deadlocks & Negotiations: Cripps Mission, Wavell Plan, Shimla Conference",
+                        "Peasant and Labor Organizations: All India Kisan Sabha & Trade Union Congress",
+                        "Role of Princely State Movements (Praja Mandals) in broader struggle",
+                        "Post-War Upsurge: Royal Indian Navy (RIN) Mutiny & INA Trials impact"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "What was the difference between Mahatma Gandhi and Rabindranath Tagore in their approach towards education and nationalism?" },
+                        { year: 2021, marks: "10 Marks", text: "Assess the role of British imperial policy in the Partition of India." },
+                        { year: 2018, marks: "15 Marks", text: "Throw light on the significance of the thoughts of Mahatma Gandhi in the present times." }
+                    ]
+                },
+                "Post-Independence Consolidation & Reorganization": {
+                    themes: ["Integration of Princely States", "Linguistic Reorganization of States", "Land Reforms & Green Revolution", "Post-Independence Foreign Policy"],
+                    dimensionsCovered: [
+                        "Sardar Patel's strategy in integrating Kashmir, Hyderabad, and Junagadh",
+                        "States Reorganization Commission (Fazl Ali) and linguistic identity",
+                        "Agrarian structural changes and Land Ceiling Act challenges",
+                        "Non-Aligned Movement (NAM) and Shastri-Indira era consolidation"
+                    ],
+                    noteMakingDimensions: [
+                        "Tribal Integration Framework: Nehru's Tribal Panchsheel policy",
+                        "Emergency Era (1975-77): Constitutional impact and political realignment",
+                        "Insurgency in North-East & Regional Autonomy Accords (Assam Accord, Mizo Accord)",
+                        "Economic Shift 1991: Post-LPG reforms impact on nation building"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Trace India's consolidation process during the early phase of independence in terms of polity, economy, and foreign policy." },
+                        { year: 2013, marks: "10 Marks", text: "Analyze the circumstances that led to the Tashkent Agreement in 1966 and highlight its key features." }
+                    ]
+                },
+                "History of the World (18th Century Onwards)": {
+                    themes: ["Industrial Revolution", "World Wars & Decolonization", "Redraw of National Boundaries", "Capitalism, Communism & Socialism"],
+                    dimensionsCovered: [
+                        "Industrial Revolution causes and socio-economic consequences in Europe",
+                        "Inter-war democratic crises, rise of Fascism and Nazism",
+                        "Cold War politics, proxy wars, and collapse of Soviet Union",
+                        "French and American revolutions and their global ideological impacts"
+                    ],
+                    noteMakingDimensions: [
+                        "Decolonization Patterns: Asia vs Africa comparison",
+                        "Imperialism and Scramble for Africa: Economic and geopolitical motives",
+                        "Chinese Revolution (1949) & Cultural Revolution impact",
+                        "Global Economic Crises: Great Depression (1929) lessons for modern world"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "10 Marks", text: "There arose a serious challenge to the Democratic State System between the two World Wars. Evaluate." },
+                        { year: 2019, marks: "15 Marks", text: "Explain how the foundation of the modern world was laid by the American and French Revolutions." }
+                    ]
+                },
+                "Salient Features of Indian Society & Diversity": {
+                    themes: ["Caste System & Transformations", "Linguistic & Religious Diversity", "Unity in Diversity Concept", "Cultural Homogenization Threats"],
+                    dimensionsCovered: [
+                        "Impact of globalization on traditional cultural diversity",
+                        "Caste dynamics changing from ritual hierarchy to political mobilization",
+                        "Pluralism and tolerance as historical pillars of Indian society"
+                    ],
+                    noteMakingDimensions: [
+                        "Sanskritization vs Westernization in modern context",
+                        "Secularism: Western model vs Indian model of equal respect (Sarva Dharma Sambhava)",
+                        "Tribal Assimilation vs Isolation debate: PVTGs protection",
+                        "Inter-generational Conflict in family and social values"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "Explore the relationship between globalization and cultural diversity in India." },
+                        { year: 2020, marks: "15 Marks", text: "Is diversity and pluralism under threat due to globalization in the Indian context? Justify." }
+                    ]
+                },
+                "Role of Women & Women's Organizations": {
+                    themes: ["Women's Movements in India", "Gender Inequality & Economic Role", "Legislative Protection for Women", "Care Economy"],
+                    dimensionsCovered: [
+                        "Evolution of women's movement from 19th-century reform to modern rights-based movement",
+                        "Female Labour Force Participation Rate (FLFPR) decline causes",
+                        "Changing family structure and status of women in marriage"
+                    ],
+                    noteMakingDimensions: [
+                        "Unpaid Care Work: Recognition, reduction, and redistribution (3Rs framework)",
+                        "Gender-Based Violence & Digital Harassment: Cyber-safety for women",
+                        "Political Empowerment: From Panchayats (73rd Act) to Parliament (106th Amendment)",
+                        "Property and Inheritance Rights across personal laws"
                     ],
                     pyqs: [
                         { year: 2024, marks: "15 Marks", text: "Examine the changing status of women in Indian society with special reference to family and marriage." },
-                        { year: 2023, marks: "15 Marks", text: "Does regionalism imply anti-nationalism? Discuss in the context of contemporary Indian politics." },
+                        { year: 2021, marks: "15 Marks", text: "Examine the role of ‘Gig Economy’ in the empowerment of women in India." }
+                    ]
+                },
+                "Population, Poverty & Developmental Issues": {
+                    themes: ["Demographic Dividend & Transition", "Poverty Estimation & Indices", "Migration & Urban Slums", "Human Capital Development"],
+                    dimensionsCovered: [
+                        "Demographic dividend window opportunity and employment generation gap",
+                        "Multidimensional Poverty Index (MPI) vs income-based poverty estimation",
+                        "Rural to urban migration push-pull factors"
+                    ],
+                    noteMakingDimensions: [
+                        "Population Ageing: Silver economy and social security infrastructure",
+                        "Urban Slum Dynamics: Right to housing vs slum clearance",
+                        "Distress Migration: Impact on left-behind families and children",
+                        "Skill Deficit: Vocational training alignment with Industry 4.0"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Though several poverty alleviation programs exist, poverty continues to persist in India. Identify structural bottlenecks." },
+                        { year: 2020, marks: "10 Marks", text: "COVID-19 pandemic accelerated class inequalities and poverty in India. Comment." }
+                    ]
+                },
+                "Urbanization: Problems & Remedies": {
+                    themes: ["Urban Planning & Smart Cities", "Urban Flooding & Heat Islands", "Waste Management & Sanitation", "Urban Transport Infrastructure"],
+                    dimensionsCovered: [
+                        "Unplanned urbanization consequences: Slums, traffic congestion, pollution",
+                        "Urban flooding causes, drainage infrastructure failures, sponge cities",
+                        "Role of municipal bodies (74th Amendment) in urban governance"
+                    ],
+                    noteMakingDimensions: [
+                        "Urban Heat Islands (UHI): Microclimate changes and cool roof strategies",
+                        "Peri-Urban Dynamics: Land use conversion conflicts",
+                        "Transit-Oriented Development (TOD) and last-mile urban mobility",
+                        "Solid & Liquid Waste Management: Circular economy in cities"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Discuss the causes and management strategies for urban flooding in major Indian cities." },
+                        { year: 2021, marks: "10 Marks", text: "Bring out the socio-economic implications of rising urban population in India." }
+                    ]
+                },
+                "Effects of Globalization on Indian Society": {
+                    themes: ["Cultural Globalization vs Hybridization", "Consumerism & Lifestyle Changes", "Impact on Agrarian Society", "Glocalization Concept"],
+                    dimensionsCovered: [
+                        "Globalization impact on elderly, youth, and traditional family bonds",
+                        "Growth of global consumer culture vs local artisan livelihoods",
+                        "Homogenization vs glocalization in Indian food, music, and fashion"
+                    ],
+                    noteMakingDimensions: [
+                        "Digital Globalization: Social media influence on social norms and mental health",
+                        "Impact on Indigenous Knowledge & Traditional Medicine systems",
+                        "Agrarian Distress post-LPG: Market volatility and small farmer vulnerabilities",
+                        "Language Loss: Threat to minority languages amidst English domination"
+                    ],
+                    pyqs: [
                         { year: 2022, marks: "10 Marks", text: "Explore the relationship between globalization and cultural diversity in India." },
-                        { year: 2020, marks: "15 Marks", text: "Is diversity and pluralism under threat due to globalization in the Indian context? Justify." }
+                        { year: 2019, marks: "10 Marks", text: "Are we losing our local identity for global identity? Discuss." }
+                    ]
+                },
+                "Social Empowerment, Communalism, Regionalism & Secularism": {
+                    themes: ["Social Justice & Affirmative Action", "Communalism Causes & Prevention", "Regionalism vs National Integration", "Indian Secularism Model"],
+                    dimensionsCovered: [
+                        "Distinction between regionalism and anti-nationalism",
+                        "Communalism as a political tool and historical roots",
+                        "Indian model of Secularism vs Western strict separation model"
+                    ],
+                    noteMakingDimensions: [
+                        "Sons of the Soil Doctrine: Economic migration vs local reservation demands",
+                        "Hate Speech & Online Radicalization: Regulatory and legal safeguards",
+                        "Sub-categorization of SC/ST/OBCs: Equitable reservation distribution",
+                        "Inter-faith Harmony Institutions: Peace committees and civil society role"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Does regionalism imply anti-nationalism? Discuss in the context of contemporary Indian politics." },
+                        { year: 2018, marks: "15 Marks", text: "How the Indian concept of secularism is different from the western model of secularism? Discuss." }
+                    ]
+                },
+                "Salient Features of World's Physical Geography": {
+                    themes: ["Plate Tectonics & Earthquakes", "Vulcanicity & Tsunamis", "Atmospheric Circulation & Monsoons", "Ocean Currents & El Niño"],
+                    dimensionsCovered: [
+                        "Plate tectonic theory explaining ocean basin and continental mountain formation",
+                        "Factors driving ocean currents and impact on coastal climates",
+                        "Tropical vs extra-tropical cyclone formation mechanisms",
+                        "Monsoon origin mechanisms and teleconnections (ENSO, IOD)"
+                    ],
+                    noteMakingDimensions: [
+                        "Polar Vortex and Jet Stream Meandering: Extreme weather links",
+                        "Geomorphology of Karst and Glacial Topography",
+                        "Global Soil Belts and degradation mechanisms",
+                        "Deep Sea Trench Dynamics and Subduction Zone hazards"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Discuss how the changes in shape and sizes of continents and ocean basins take place due to tectonic movements." },
+                        { year: 2023, marks: "15 Marks", text: "What is the mechanism of monsoon origin in India? Discuss the factors influencing its variability." },
+                        { year: 2022, marks: "10 Marks", text: "What are the forces that drive ocean currents? Describe their role in influencing regional climates." }
+                    ]
+                },
+                "Distribution of Key Natural Resources Across the World": {
+                    themes: ["Water, Minerals & Forests", "Energy Resources (Oil, Gas, Coal)", "Critical & Rare Earth Minerals", "Oceanic & Arctic Resources"],
+                    dimensionsCovered: [
+                        "Uneven distribution of mineral resources and global trade implications",
+                        "Water crisis, river basin management, and inter-state conflicts",
+                        "Location factors of iron & steel, cotton textile, and petroleum industries"
+                    ],
+                    noteMakingDimensions: [
+                        "Critical Minerals Geopolitics: Lithium, Cobalt, Rare Earth Elements supply chains",
+                        "Deep Ocean Resources: Polymetallic nodules and UNCLOS regulations",
+                        "Arctic Resource Scramble: Melting ice caps, new sea routes, and resource claims",
+                        "Depletion of Fossil Fuels: Strategic petroleum reserves and transition minerals"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "15 Marks", text: "Discuss the multidimensional implications of uneven distribution of mineral resources across the world." },
+                        { year: 2020, marks: "15 Marks", text: "Account for the present location of iron and steel industries in the world, with special reference to India." }
+                    ]
+                },
+                "Factors Responsible for Location of Industries": {
+                    themes: ["Primary, Secondary, Tertiary Industry Location", "Raw Material vs Market Orientation", "Agglomeration Economies", "Footloose Industries & Tech Hubs"],
+                    dimensionsCovered: [
+                        "Shift of sugar industry from North India to Peninsular India",
+                        "Location factors of pharmaceutical and IT industries",
+                        "Weber's industrial location theory applicability in modern supply chains"
+                    ],
+                    noteMakingDimensions: [
+                        "Semiconductor Fabs Location Dynamics: Clean water, power, and ultra-precision logistics",
+                        "Gigafactories & EV Battery Plants: Proximity to power grid and critical mineral hubs",
+                        "Special Economic Zones (SEZs) & Industrial Corridors: Infrastructure integration",
+                        "De-industrialization of traditional hubs and Rust Belts"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "15 Marks", text: "What are the factors responsible for the location of primary, secondary, and tertiary sector industries in different parts of the world?" },
+                        { year: 2013, marks: "10 Marks", text: "Analyze the factors for the location of sugar industry in India and explain why it is shifting towards South India." }
+                    ]
+                },
+                "Important Geophysical Phenomena & Geographical Features": {
+                    themes: ["Earthquakes, Tsunami & Volcanoes", "Cyclones & Cloudbursts", "Glacier Retreat & Sea Level Rise", "Flora, Fauna & Critical Eco-changes"],
+                    dimensionsCovered: [
+                        "Mechanism and impact of cloudbursts in Himalayan region",
+                        "Glacier retreat in Himalayas and threat to river ecosystems",
+                        "Mangrove ecosystem degradation and coastal hazard protection"
+                    ],
+                    noteMakingDimensions: [
+                        "Glacial Lake Outburst Floods (GLOF): Early warning and hazard mapping",
+                        "Ocean Acidification & Coral Bleaching: Geographical distribution of damage",
+                        "Desertification & Land Degradation Neutrality (LDN) targets",
+                        "Permafrost Thawing: Methane release and northern infrastructure damage"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "10 Marks", text: "Comment on the resource potentials of the long coastline of India and highlight the status of coastal disaster preparedness." },
+                        { year: 2021, marks: "10 Marks", text: "Differentiate between Tropical and Temperate Cyclones with focus on their origin and impact." }
                     ]
                 }
             },
             "GS Paper 2: Governance, Polity, Social Justice & IR": {
-                "Indian Constitution & Basic Structure": {
-                    themes: ["Basic Structure Evolution", "Constitutional Amendments (73rd, 74th, 106th)", "Judicial Review vs Legislative Supremacy"],
+                "Indian Constitution: Historical Underpinnings & Features": {
+                    themes: ["Colonial Acts Influence", "Preamble Values", "Constitutional Borrowings", "Rigidity vs Flexibility Balance"],
                     dimensionsCovered: [
-                        "Article 21 scope expansion by Judiciary",
-                        "Governor's Ordinance-making powers (Article 213) and discretion limits",
-                        "Basic Structure Doctrine landmark judgment impacts",
-                        "Federal vs Unitary features balance"
+                        "Government of India Act 1935 as administrative bedrock of Constitution",
+                        "Preamble as a key to constitutional interpretation",
+                        "Synthesis of Parliamentary Sovereignty and Judicial Supremacy"
                     ],
                     noteMakingDimensions: [
-                        "Substantive Equality vs Formal Equality: Affirmative action mechanics & creamy layer debate",
-                        "Tribunalization of Justice: Executive encroachment on judicial independence",
-                        "Electoral Integrity & Funding: Transparency mechanisms, free speech vs regulation",
-                        "Delegated Legislation: Executive law-making excesses and parliamentary control gaps"
+                        "Constituent Assembly Debates: Key compromises on language, reservation, and federalism",
+                        "Constitutional Morality: SC interpretations and executive accountability",
+                        "Living Constitution Concept: Dynamic interpretation vs original intent",
+                        "Unwritten Conventions in Indian Parliamentary Democracy"
+                    ],
+                    pyqs: [
+                        { year: 2020, marks: "15 Marks", text: "The Constitution of India is a living document with capabilities of enormous dynamism. Discuss." },
+                        { year: 2018, marks: "10 Marks", text: "Underline the central values of the Preamble and their relevance to modern governance." }
+                    ]
+                },
+                "Amendments, Significant Provisions & Basic Structure": {
+                    themes: ["Article 368 & Amendment Procedure", "Landmark Amendments (42nd, 44th, 73rd, 106th)", "Basic Structure Doctrine", "Article 21 Expansion"],
+                    dimensionsCovered: [
+                        "Evolution of Basic Structure Doctrine from Shankari Prasad to Kesavananda and I.R. Coelho",
+                        "Article 21 scope expansion to right to privacy, clean environment, education",
+                        "106th Constitutional Amendment Act (Women's Reservation) features and significance"
+                    ],
+                    noteMakingDimensions: [
+                        "Judicial Review vs Judicial Activism vs Judicial Overreach",
+                        "Amendability of Fundamental Rights vs Directive Principles balance",
+                        "Electoral Reforms & Anti-Defection Law Amendments (Schedule 10 gaps)",
+                        "Emergency Provisions (Articles 352, 356, 360) safeguards added post-1978"
                     ],
                     pyqs: [
                         { year: 2024, marks: "15 Marks", text: "Examine the role of the Supreme Court of India in expanding the scope of Fundamental Rights through Article 21." },
                         { year: 2023, marks: "15 Marks", text: "Analyze the significance of the 106th Constitutional Amendment Act regarding women's reservation." },
-                        { year: 2022, marks: "10 Marks", text: "Discuss the essential conditions for the exercise of legislative power by the Governor under Article 213." },
                         { year: 2019, marks: "15 Marks", text: "Explain the doctrine of basic structure as enunciated by the Supreme Court in the Kesavananda Bharati case." }
                     ]
                 },
-                "Federal Structure & Inter-State Relations": {
-                    themes: ["Governor's Role & Article 356", "Fiscal Federalism & Finance Commission", "Inter-State Water Disputes & Councils"],
+                "Functions & Responsibilities of Union and States": {
+                    themes: ["Legislative, Executive & Financial Powers", "Seventh Schedule Lists Friction", "Cooperative & Competitive Federalism", "Central Schemes vs State Autonomy"],
                     dimensionsCovered: [
-                        "Friction points between Governor and elected State Executives",
-                        "Finance Commission role in resolving horizontal & vertical fiscal imbalances",
-                        "Inter-State Council utility in cooperative federalism"
+                        "Union List vs State List friction points (Law & Order, Agriculture, Education)",
+                        "Role of NITI Aayog in promoting cooperative federalism",
+                        "Centrally Sponsored Schemes (CSS) impact on state fiscal autonomy"
                     ],
                     noteMakingDimensions: [
-                        "Fiscal Autonomy under Cesses & Surcharges: Shrinking divisible tax pool for States",
-                        "Municipal Finance Modernization: Municipal bonds, property tax reforms, 74th Act gaps",
-                        "Sub-national Diplomacy: States engaging in global investment fetching & foreign trade",
-                        "Asymmetric Federalism: Special Category status challenges and Article 371 nuances"
+                        "7th Schedule Reform Need: Modern topics (AI, Cyber, Space) list assignment",
+                        "Asymmetric Federalism: Article 371 special provisions for NE states",
+                        "Union Territories Governance: NCR Delhi governance model (Article 239AA)",
+                        "Competitive Federalism: State rankings, Ease of Doing Business, investment attraction"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "15 Marks", text: "How far do you think cooperative federalism exists in India in the context of Union-State relations?" },
+                        { year: 2021, marks: "15 Marks", text: "Explain the constitutional position of Delhi under Article 239AA and disputes between Chief Minister and LG." }
+                    ]
+                },
+                "Federal Issues, Challenges & Inter-State Relations": {
+                    themes: ["Governor's Discretion & Friction", "Article 356 Abuse & Sarkaria/Punchhi Norms", "Inter-State Water Disputes", "Inter-State Councils"],
+                    dimensionsCovered: [
+                        "Friction points between Governor and elected State Chieif Ministers (Bill assent, reservation)",
+                        "Inter-State River Water Disputes Act drawbacks and delay in tribunal awards",
+                        "Inter-State Council (Article 263) potential and under-utilization"
+                    ],
+                    noteMakingDimensions: [
+                        "Fiscal Autonomy under Cesses & Surcharges: Shrinking divisible tax pool",
+                        "Sub-national Diplomacy: States engaging directly with multilateral financial institutions",
+                        "Border Disputes between North-Eastern States: Historical origins and modern accords",
+                        "Zonal Councils role in resolving regional security and infrastructure deadlocks"
                     ],
                     pyqs: [
                         { year: 2024, marks: "10 Marks", text: "Evaluate the role of Inter-State Councils in fostering federal cooperation in India." },
-                        { year: 2023, marks: "15 Marks", text: "Account for the rising instances of friction between Governors and elected Chief Ministers in recent times." },
+                        { year: 2023, marks: "15 Marks", text: "Account for the rising instances of friction between Governors and elected Chief Ministers in recent times." }
+                    ]
+                },
+                "Devolution of Powers & Finances to Local Levels (73rd & 74th Acts)": {
+                    themes: ["Panchayati Raj Institutions (PRIs)", "Urban Local Bodies (ULBs)", "3Fs (Funds, Functions, Functionaries) Gaps", "Parchhai/Pati-Panchayat Issue"],
+                    dimensionsCovered: [
+                        "Structural gaps in devolution of 3Fs to PRIs across states",
+                        "Municipal Finance bottlenecks: Dependence on state grants vs internal tax collection",
+                        "Impact of 33% reservation for women in local self-governance"
+                    ],
+                    noteMakingDimensions: [
+                        "Municipal Bonds Market: Urban financial autonomy via credit ratings",
+                        "PESA Act (1996) Implementation: Tribal self-rule and Gram Sabha empowerment gaps",
+                        "District Planning Committees (DPCs) functional paralysis",
+                        "Smart Cities Mission integration with traditional ULB governance"
+                    ],
+                    pyqs: [
+                        { year: 2020, marks: "10 Marks", text: "The third tier of governance in India has not been adequately empowered to perform its functions. Comment." },
+                        { year: 2018, marks: "15 Marks", text: "Assess the status of implementation of PESA Act 1996 in tribal dominated areas." }
+                    ]
+                },
+                "Separation of Powers, Dispute Redressal & Institutions": {
+                    themes: ["Executive vs Judiciary vs Legislature", "Judicial Activism vs Overreach", "Tribunalization of Justice", "Alternate Dispute Redressal (ADR)"],
+                    dimensionsCovered: [
+                        "Executive encroachment on legislative domain via repeated Ordinances",
+                        "Tribunal independence issues and Supreme Court rulings (Madras Bar Association)",
+                        "Role of Lok Adalats and Gram Nyayalayas in reducing pendency"
+                    ],
+                    noteMakingDimensions: [
+                        "Contempt of Court Act: Free speech vs judicial dignity balance",
+                        "Commercial Courts & Arbitration Act Reforms: Ease of doing business",
+                        "Pardoning Power of President/Governor (Articles 72, 161) judicial review limits",
+                        "Public Interest Litigation (PIL): Tool for justice vs extortion/publicity stunt"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "10 Marks", text: "Discuss the essential conditions for the exercise of legislative power by the Governor under Article 213." },
+                        { year: 2019, marks: "10 Marks", text: "Do you agree that Judicial Activism has led to friction between Judiciary and Executive? Analyze." }
+                    ]
+                },
+                "Comparison of the Indian Constitutional Scheme with Other Countries": {
+                    themes: ["India vs US System", "India vs UK Parliamentary System", "India vs France Presidential-Presidential Model", "India vs Secularism in World"],
+                    dimensionsCovered: [
+                        "Comparison of judicial review powers in India vs US",
+                        "Indian Parliamentary sovereignty limits vs UK absolute parliamentary sovereignty",
+                        "Presidential vs Semi-Presidential vs Parliamentary executive comparison"
+                    ],
+                    noteMakingDimensions: [
+                        "Senate (US) vs Rajya Sabha (India): Representation of equal state rights",
+                        "Due Process of Law (US) vs Procedure Established by Law (India - Art 21)",
+                        "Constructive Vote of No Confidence (Germany) relevance for Indian stability",
+                        "Federal emergency powers comparison: India vs Canada"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "10 Marks", text: "Compare the procedure of impeachment of the President of India with that of the President of USA." },
+                        { year: 2018, marks: "10 Marks", text: "Analyze the salient differences between the parliamentary systems of India and the United Kingdom." }
+                    ]
+                },
+                "Parliament & State Legislatures: Structure, Functioning & Conduct": {
+                    themes: ["Law Making Process", "Parliamentary Committees System", "Decline in Legislative Sittings", "Anti-Defection Law (Schedule 10)"],
+                    dimensionsCovered: [
+                        "Role of Departmentally Related Standing Committees in scrutinizing bills",
+                        "Anti-Defection law flaws: Speaker's discretion and delay in disqualification",
+                        "Bypassing Rajya Sabha using Money Bill route critique"
+                    ],
+                    noteMakingDimensions: [
+                        "Private Members' Bills: Low passage rates and policy influence",
+                        "Parliamentary Privilege vs Freedom of Speech: Need for codification",
+                        "Delegated Legislation: Executive lawmaking oversight by Parliament",
+                        "Disruption vs Debate: Productivity metrics and reform suggestions"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Analyze the role of Parliamentary Committees in ensuring executive accountability." },
+                        { year: 2022, marks: "10 Marks", text: "Discuss the role of Presiding Officers of State Legislative Assemblies in maintaining order and impartiality." }
+                    ]
+                },
+                "Executive & Judiciary: Structure, Organization & Functioning": {
+                    themes: ["Cabinet Secretariat & PMO", "Collegium System vs NJAC", "Pendency of Cases & All India Judicial Service", "Public Interest Litigation"],
+                    dimensionsCovered: [
+                        "Collegium System transparency criticism and judicial appointment delays",
+                        "Role of Cabinet Secretariat in inter-ministerial coordination",
+                        "Massive pendency of cases in High Courts and Lower Judiciary"
+                    ],
+                    noteMakingDimensions: [
+                        "PMO Centralization: Impact on individual Cabinet Ministry autonomy",
+                        "All India Judicial Service (AIJS) under Article 312: Feasibility and state resistance",
+                        "National Judicial Infrastructure Corporation: Modernizing courtrooms",
+                        "Master of Roster Power: Discretionary case assignment by Chief Justice"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Critically examine the Supreme Court Collegium system for appointment of judges in higher judiciary." },
+                        { year: 2020, marks: "10 Marks", text: "How far do you think Judicial Review checks executive arbitrariness in India?" }
+                    ]
+                },
+                "Representation of People’s Act (RPA 1950 & 1951) & Salient Features": {
+                    themes: ["Disqualification Criteria (Sec 8)", "Electoral Funding & Transparency", "Model Code of Conduct (MCC)", "Criminalization of Politics"],
+                    dimensionsCovered: [
+                        "Disqualification of MPs/MLAs upon conviction under RPA Section 8(4)",
+                        "Criminalization of politics and mandatory asset/criminal disclosure affidavits",
+                        "Legal enforcement status of Model Code of Conduct during elections"
+                    ],
+                    noteMakingDimensions: [
+                        "Simultaneous Elections (One Nation One Election): Constitutional and operational challenges",
+                        "Electoral Trust & Political Funding Transparency post-Electoral Bonds verdict",
+                        "Freebies vs Welfare Promises in Election Manifestos: ECI regulatory limits",
+                        "NRI and Migrant Voting Rights: Remote EVMs (R-EVM) feasibility"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "15 Marks", text: "Discuss the procedures and grounds for disqualification of elected representatives under Representation of People Act 1951." },
+                        { year: 2019, marks: "15 Marks", text: "Individual election petitions take years to settle. Discuss reforms required in RPA." }
+                    ]
+                },
+                "Appointment to Constitutional Posts & Powers of Bodies": {
+                    themes: ["Election Commission of India (ECI)", "UPSC & CAG", "Finance Commission", "National Commissions for SC/ST/OBC"],
+                    dimensionsCovered: [
+                        "CAG role as guardian of public purse and performance audits",
+                        "Election Commission independence: Selection process reforms post-2023 legislation",
+                        "Finance Commission role in horizontal and vertical tax devolution"
+                    ],
+                    noteMakingDimensions: [
+                        "Removal Procedure Uniformity across Constitutional Posts",
+                        "NCST & NCSC Constitutional powers vs enforceability of recommendations",
+                        "Attorney General & Solicitor General: Independence vs political advisory role",
+                        "Post-Retirement Appointments: Cooling-off period necessity for constitutional heads"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "10 Marks", text: "Discuss the role of the Comptroller and Auditor General (CAG) of India in ensuring financial accountability." },
                         { year: 2022, marks: "10 Marks", text: "How far do you think the Finance Commission helps in resolving fiscal imbalances between Union and States?" }
+                    ]
+                },
+                "Statutory, Regulatory & Quasi-Judicial Bodies": {
+                    themes: ["NHRC & CVC / CBI", "SEBI, CCI & TRAI", "NGT & Food Safety Authority", "National Commission for Women"],
+                    dimensionsCovered: [
+                        "National Human Rights Commission (NHRC) toothless body criticism ('toothless tiger')",
+                        "Regulatory capture and autonomy issues in TRAI, SEBI, and CCI",
+                        "CBI autonomy, general consent withdrawal by states, and political misuse"
+                    ],
+                    noteMakingDimensions: [
+                        "National Green Tribunal (NGT): Environmental justice vs infrastructure project delay",
+                        "Data Protection Board under DPDP Act 2023: Independence and powers",
+                        "Overlapping Regulatory Domains: CCI vs Sectoral Regulators (TRAI/IRDAI)",
+                        "Quasi-Judicial Powers in Enforcement Directorate (ED) & PMLA Act scope"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "15 Marks", text: "National Human Rights Commission (NHRC) has been described as a toothless tiger. Suggest measures to strengthen it." },
+                        { year: 2019, marks: "10 Marks", text: "Clarify the executive and statutory powers of the Central Bureau of Investigation (CBI)." }
+                    ]
+                },
+                "Government Policies & Interventions for Development": {
+                    themes: ["Policy Design vs Implementation Gaps", "Digital Interventions (Digital India)", "Infrastructure Policy (PM Gati Shakti)", "Right-based Legislation"],
+                    dimensionsCovered: [
+                        "Design deficiencies vs field-level implementation bottlenecks in welfare schemes",
+                        "Digital India impact on reducing corruption and intermediary leakages",
+                        "PM Gati Shakti for multi-modal infrastructure planning and inter-departmental silos"
+                    ],
+                    noteMakingDimensions: [
+                        "Policy Evaluation Mechanisms: Third-party social impact assessments",
+                        "Behavioral Economics in Policy: Swachh Bharat & Beti Bachao nudge techniques",
+                        "Targeted vs Universal Beneficiary Identification: Aadhaar exclusion errors",
+                        "Public Procurement Policy: GeM portal and MSE reservation quotas"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Examine the role of PM Gati Shakti National Master Plan in achieving integrated infrastructure development." },
+                        { year: 2020, marks: "15 Marks", text: "Implementation of welfare schemes requires shifting from top-down to bottom-up approach. Discuss." }
+                    ]
+                },
+                "Development Processes & NGO, SHG, Civil Society Role": {
+                    themes: ["Non-Governmental Organizations (NGOs)", "Self-Help Groups (SHGs) & NRLM", "Civil Society Organizations (CSOs)", "Donor Agencies & FCRA Rules"],
+                    dimensionsCovered: [
+                        "Role of SHGs in microfinance, women economic empowerment, and poverty reduction",
+                        "FCRA Amendment Act impact on NGO funding and operational freedom",
+                        "Civil Society as a fifth pillar of democracy in policy advocacy"
+                    ],
+                    noteMakingDimensions: [
+                        "SHG-Bank Linkage Program (SBLP) non-performing asset trends",
+                        "Social Enterprises & Social Stock Exchange (SSE) framework",
+                        "NGO Transparency & NITI Aayog Darpan portal integration",
+                        "Civil Society response during national disasters and public health crises"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "15 Marks", text: "Examine the role of Self Help Groups (SHGs) in rural development and women empowerment in India." },
+                        { year: 2019, marks: "10 Marks", text: "Can Civil Society Organizations act as an effective alternative mechanism for service delivery? Analyze." }
+                    ]
+                },
+                "Welfare Schemes for Vulnerable Sections & Performance": {
+                    themes: ["SC/ST Welfare Schemes", "Minority Welfare Policies", "Disabled (Divyangjan) Rights Act", "Senior Citizens & Children Protection"],
+                    dimensionsCovered: [
+                        "Performance of Forest Rights Act (FRA 2006) in empowering STs",
+                        "Rights of Persons with Disabilities Act 2016 features and accessibility gaps",
+                        "POCSO Act and child protection welfare machinery effectiveness"
+                    ],
+                    noteMakingDimensions: [
+                        "Manual Scavenging Eradication: NAMASTE scheme and mechanization barriers",
+                        "Transgender Persons (Protection of Rights) Act implementation gaps",
+                        "PVTG (Particularly Vulnerable Tribal Groups) Development Mission framework",
+                        "Old-Age Pension & Maintenance and Welfare of Parents Act enforcement"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "15 Marks", text: "Critically evaluate the performance of Forest Rights Act 2006 in safeguarding tribal rights." },
+                        { year: 2018, marks: "10 Marks", text: "Examine the salient features of the Rights of Persons with Disabilities Act 2016." }
+                    ]
+                },
+                "Issues Relating to Health, Education & Human Resources": {
+                    themes: ["Ayushman Bharat & Health Infrastructure", "National Education Policy (NEP 2020)", "Malnutrition & Poshan Abhiyaan", "Skill Development & Employability"],
+                    dimensionsCovered: [
+                        "Ayushman Bharat PM-JAY impact on reducing Out-of-Pocket Expenditure (OOPE)",
+                        "National Education Policy 2020 reforms in higher education and primary literacy",
+                        "Malnutrition, stunting, and wasting challenge despite Food Security Act"
+                    ],
+                    noteMakingDimensions: [
+                        "Doctor-Patient Ratio & Rural Healthcare Deficit: Community Health Workers",
+                        "EdTech Integration & Digital Divide: PM e-VIDYA and SWAYAM platforms",
+                        "Medical Education Reforms: National Medical Commission (NMC) role",
+                        "National Skill Qualification Framework (NSQF) alignment with industry needs"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Assess the role of Ayushman Bharat scheme in achieving Universal Health Coverage in India." },
+                        { year: 2021, marks: "10 Marks", text: "Can the National Education Policy (NEP) 2020 bring transformational changes in higher education? Examine." }
+                    ]
+                },
+                "Issues Relating to Poverty and Hunger": {
+                    themes: ["Global Hunger Index (GHI) Methodology", "National Food Security Act (NFSA)", "PDS Fortification & Mid-Day Meal", "Hidden Hunger & Micro-nutrient Deficiency"],
+                    dimensionsCovered: [
+                        "India's performance in Global Hunger Index and methodology debate",
+                        "National Food Security Act implementation, PDS digitized grain distribution",
+                        "Hidden hunger and micro-nutrient deficiencies (Iron, Iodine, Vitamin A)"
+                    ],
+                    noteMakingDimensions: [
+                        "Rice Fortification Policy: Health benefits vs safety concerns",
+                        "Community Kitchens Feasibility for urban poor food security",
+                        "Agro-Biodiversity for Nutritional Security: Millets integration",
+                        "PDS vs Direct Benefit Transfer (DBT) Cash Transfer for food debate"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "15 Marks", text: "There is a growing divergence between poverty reduction and hunger elimination in India. Comment." },
+                        { year: 2019, marks: "10 Marks", text: "What are the key causes of hunger and malnutrition in India? How can PDS be reformed?" }
+                    ]
+                },
+                "Important Aspects of Governance, Transparency & Accountability": {
+                    themes: ["RTI Act & Amendments", "Citizen Charters & Sevottam Model", "Social Audit Institutionalization", "E-Governance Applications"],
+                    dimensionsCovered: [
+                        "RTI Act 2019 amendments impact on Information Commission independence",
+                        "Citizen Charters lack of legal enforceability and generic commitments",
+                        "Social Audits role in curbing MGNREGA and PDS leakages"
+                    ],
+                    noteMakingDimensions: [
+                        "Whistleblowers Protection Act non-notification issue",
+                        "Data Protection vs Right to Information (DPDP Act vs RTI conflicts)",
+                        "Sevottam Model for quality public service delivery benchmarking",
+                        "Proactive Disclosure under RTI Section 4 compliance gaps"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "15 Marks", text: "The Right to Information Act is not just about revealing information, but about holding authority accountable. Analyze." },
+                        { year: 2021, marks: "10 Marks", text: "Institutionalizing Social Audits is vital for effective implementation of welfare schemes. Comment." }
+                    ]
+                },
+                "E-Governance: Applications, Models, Successes & Limitations": {
+                    themes: ["Digital Public Infrastructure (DPI - India Stack)", "Aadhaar, UPI & DigiLocker", "Direct Benefit Transfer (DBT)", "Digital Divide & Cyber Security Risks"],
+                    dimensionsCovered: [
+                        "Role of India Stack (UPI, Aadhaar, DigiLocker) in transforming public service",
+                        "Direct Benefit Transfer (DBT) success in reducing ghost beneficiaries",
+                        "Process re-engineering imperative before digitalizing governance"
+                    ],
+                    noteMakingDimensions: [
+                        "AI in Governance: Predictive policing, automated welfare verification biases",
+                        "Cyber Security Gaps in Digital Public Infrastructure",
+                        "Digital Literacy Barriers in Rural and Tribal belts (PM-DISHA)",
+                        "Open Network for Digital Commerce (ONDC) as e-governance innovation"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "10 Marks", text: "E-governance is not only about utilization of technology in public service, but also about re-engineering governance processes. Discuss." },
+                        { year: 2020, marks: "15 Marks", text: "Digital India initiative has brought efficiency, but digital divide remains a major bottleneck. Analyze." }
+                    ]
+                },
+                "Role of Civil Services in a Democracy": {
+                    themes: ["Generalist vs Specialist Debate", "Lateral Entry in Bureaucracy", "Mission Karmayogi Capacity Building", "Political Neutrality & Anonymity"],
+                    dimensionsCovered: [
+                        "Lateral Entry induction at Joint Secretary level: Benefits and structural risks",
+                        "Erosion of civil service anonymity and political neutrality trend",
+                        "Mission Karmayogi for competency-driven human resource management"
+                    ],
+                    noteMakingDimensions: [
+                        "Civil Services Board (CSB) for fixed tenure enforcement",
+                        "Performance Appraisal Systems: PARPAR and 360-degree feedback review",
+                        "Bureaucratic Inertia vs Risk-Taking in public procurement",
+                        "Section 17A Prevention of Corruption Act sanction requirement debate"
+                    ],
+                    pyqs: [
+                        { year: 2020, marks: "10 Marks", text: "Institutionalizing lateral entry into civil services can inject domain expertise. Discuss drawbacks and safeguards." },
+                        { year: 2017, marks: "15 Marks", text: "Examine the role of Civil Services in preserving democracy and national integration in post-independence India." }
+                    ]
+                },
+                "India and its Neighborhood-Relations": {
+                    themes: ["Neighborhood First Policy", "India-Pakistan & India-China Relations", "India-Sri Lanka, Nepal, Bangladesh", "Cross-Border Infrastructure & Security"],
+                    dimensionsCovered: [
+                        "China's Belt and Road Initiative (BRI) and String of Pearls around India",
+                        "India-Nepal Kalapani boundary issue and Treaty of Peace 1950",
+                        "India-Sri Lanka economic assistance during financial crisis and Tamil issue",
+                        "India-Bangladesh Land Boundary Agreement (LBA) and Teesta water sharing"
+                    ],
+                    noteMakingDimensions: [
+                        "Disaster Diplomacy & Humanitarian Assistance (HADR) in Neighborhood",
+                        "Border Infrastructure Development: Vibrant Villages Programme",
+                        "Cross-Border Electricity Trade (BBIN Framework) and pipeline connectivity",
+                        "Ethnic Crisis in Myanmar & Refugee influx into NE India"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "Critical evaluation of India's 'Neighborhood First' policy in light of recent political developments in South Asia." },
+                        { year: 2020, marks: "15 Marks", text: "Discuss the strategic implications of China's growing presence in the Indian Ocean Region for India." }
+                    ]
+                },
+                "Bilateral, Regional & Global Groupings & Agreements": {
+                    themes: ["QUAD, I2U2 & BRICS", "SCO & G20 Leadership", "BIMSTEC vs SAARC", "India-US, India-Russia, India-EU Strategic Ties"],
+                    dimensionsCovered: [
+                        "BIMSTEC as an alternative platform to dormant SAARC",
+                        "QUAD security dialogue role in free and open Indo-Pacific",
+                        "India's delicate balancing act between US strategic partnership and Russia ties",
+                        "G20 Presidency achievements: African Union inclusion and Global South voice"
+                    ],
+                    noteMakingDimensions: [
+                        "I2U2 (India, Israel, US, UAE) as West Asian QUAD",
+                        "India-EU Broad-based Trade and Investment Agreement (BTIA) roadblocks",
+                        "Critical and Emerging Technologies (iCET) pacts with US and allies",
+                        "SCO membership benefits vs security constraints regarding China/Pakistan"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Discuss the geopolitical significance of QUAD in the context of free and open Indo-Pacific region." },
+                        { year: 2023, marks: "15 Marks", text: "Do you think that BIMSTEC is a parallel organisation like SAARC? What are the similarities and differences?" }
+                    ]
+                },
+                "Effect of Policies & Politics of Developed/Developing Countries on India": {
+                    themes: ["US Federal Reserve Interest Rates Impact", "Global Supply Chain Re-orientation", "Sanctions Regimes (CAATSA)", "Protectionism & Trade Wars"],
+                    dimensionsCovered: [
+                        "Impact of US Fed rate hikes on Indian Rupee depreciation and capital outflows",
+                        "Western sanctions on Russian oil purchase and India's sovereign energy decisions",
+                        "China Plus One strategy opportunity for Indian manufacturing"
+                    ],
+                    noteMakingDimensions: [
+                        "EU Carbon Border Adjustment Mechanism (CBAM) threat to Indian exports",
+                        "Red Sea Shipping Crisis & Suez Canal disruptions impact on trade",
+                        "De-dollarization efforts and bilateral Rupee trade agreements",
+                        "Global Tech Cold War: Semiconductor supply chain diplomacy"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "15 Marks", text: "Discuss the impact of US-China trade war on the Indian economy and global trade order." },
+                        { year: 2019, marks: "10 Marks", text: "What is the significance of US CAATSA law for India's defense purchases from Russia?" }
+                    ]
+                },
+                "Important International Institutions, Agencies & Fora": {
+                    themes: ["UN Security Council Reforms", "WTO Crisis & Dispute Settlement", "IMF & World Bank Governance", "WHO & Global Health Architecture"],
+                    dimensionsCovered: [
+                        "UN Security Council paralysis and India's permanent seat case (G4 grouping)",
+                        "WTO Dispute Settlement Body paralysis due to US judge appointment veto",
+                        "IMF quota reform delay and under-representation of emerging economies"
+                    ],
+                    noteMakingDimensions: [
+                        "Global Financial Architecture reforms for Climate Finance distribution",
+                        "International Maritime Organization (IMO) decarbonization mandates",
+                        "World Health Organization (WHO) Pandemic Treaty negotiations",
+                        "Financial Action Task Force (FATF) Grey List politics and enforcement"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "15 Marks", text: "The UN Security Council no longer reflects contemporary geopolitical realities. Discuss the case for reforms." },
+                        { year: 2020, marks: "10 Marks", text: "Critically analyze the role of WHO in managing global public health emergencies." }
                     ]
                 }
             },
-            "GS Paper 3: Economy, Tech, Environment, Security & DM": {
-                "Indian Economy & Resource Mobilization": {
-                    themes: ["GDP Growth, Inflation & Monetary Policy", "Jobless Growth & Informal Sector", "Banking Sector & MSMEs"],
+            "GS Paper 3: Economic Development, Tech, Environment, Security & DM": {
+                "Indian Economy & Issues Relating to Planning & Growth": {
+                    themes: ["Five Year Plans to NITI Aayog", "Jobless Growth & Structural Reforms", "V-Shaped Recovery & GDP Calculation", "Informal Sector Formalization"],
                     dimensionsCovered: [
-                        "Role of MSMEs in inclusive growth and manufacturing GDP share",
-                        "Post-pandemic economic recovery patterns (V-shaped recovery analysis)",
-                        "GDP calculation methodology shifts (2015 revisions)"
+                        "Shift from NITI Aayog bottom-up approach vs Planning Commission top-down model",
+                        "2015 GDP calculation methodology shift (GVA at basic prices)",
+                        "Jobless growth phenomenon and low manufacturing GDP contribution"
                     ],
                     noteMakingDimensions: [
-                        "Gig & Platform Economy: Social security coverage, formalization, algorithmic management",
-                        "De-dollarization & Rupee Globalization: Bilateral currency settlement mechanisms",
-                        "Asset Monetization Pipelines (NMP): Public private partnership risks & long-term yields",
-                        "Female Labour Force Participation Rate (FLFPR): Structural bottlenecks & policy remedies"
+                        "K-shaped economic recovery post-shocks: Inequality expansion",
+                        "Middle-Income Trap risks for Indian growth trajectory",
+                        "National Indicator Framework for Sustainable Development Goals (SDGs)",
+                        "Incremental Capital-Output Ratio (ICOR) efficiency in Indian economy"
                     ],
                     pyqs: [
-                        { year: 2024, marks: "15 Marks", text: "Examine the role of MSMEs in driving inclusive growth and employment generation in the Indian economy." },
-                        { year: 2023, marks: "15 Marks", text: "Faster economic growth requires an increased share of manufacturing in GDP. Comment in the context of MSMEs." },
                         { year: 2022, marks: "10 Marks", text: "Do you agree that the Indian economy experienced V-shaped recovery post-pandemic? Give reasons." },
                         { year: 2021, marks: "15 Marks", text: "Explain the difference between computing methodology of GDP before 2015 and after 2015." }
                     ]
                 },
-                "Science, Tech, AI & Space": {
-                    themes: ["AI & Governance", "Cybersecurity Strategy", "Space Missions (Gaganyaan, Chandrayaan)"],
+                "Inclusive Growth & Issues Arising From It": {
+                    themes: ["Financial Inclusion (PMJDY)", "Income Inequality (Oxfam Reports)", "Regional Disparities", "Gig Economy & Inclusive Growth"],
                     dimensionsCovered: [
-                        "AI applications in administrative efficiency & public service delivery",
-                        "Draft National Cyber Security Strategy pillars",
-                        "Objectives and strategic relevance of space exploration missions"
+                        "Pradhan Mantri Jan Dhan Yojana (PMJDY) role in financial inclusion and DBT enablement",
+                        "Gig and platform economy role in generating flexible employment for women/youth",
+                        "Growing wealth concentration and income inequality challenges"
                     ],
                     noteMakingDimensions: [
-                        "Deepfakes & Synthetic Media: Legal frameworks, watermarking tech, election security risks",
-                        "Quantum Computing Mission: Cryptographic security threats vs processing breakthroughs",
-                        "Biotechnology & Gene Editing (CRISPR): Regulation, bio-safety, bio-economy targets",
-                        "Tech Cold War: Semiconductor supply chain diplomacy (Chip 4 Alliance) & Indian fabs"
+                        "Financial Literacy & Digital Financial Fraud prevention",
+                        "Universal Basic Income (UBI) vs Targeted Welfare Debate",
+                        "Regional Economic Divergence between Southern/Western vs Eastern/Northern States",
+                        "Inclusive AI: Ensuring automation doesn't widen wage gaps"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Faster economic growth requires an increased share of manufacturing in GDP. Comment in the context of MSMEs." },
+                        { year: 2017, marks: "10 Marks", text: "What are the salient features of 'Inclusive Growth'? Has India been experiencing such a growth process?" }
+                    ]
+                },
+                "Government Budgeting: Objectives & Components": {
+                    themes: ["Fiscal Deficit & FRBM Act", "Tax Reforms (GST)", "Capital Expenditure vs Revenue Expenditure", "Gender Budgeting & Zero-Based Budgeting"],
+                    dimensionsCovered: [
+                        "FRBM Act targets relaxation and fiscal consolidation post-pandemic path",
+                        "GST collection trends, structural flaws, and inverted duty structure",
+                        "Emphasis on Capital Expenditure (CapEx) multiplier effect for long-term growth"
+                    ],
+                    noteMakingDimensions: [
+                        "Off-Budget Borrowings transparency & CAG audits",
+                        "Tax-to-GDP ratio improvement strategies: Direct tax code reforms",
+                        "Gender Budgeting impact on actual fund allocation across ministries",
+                        "Outcome Budgeting framework for monitoring CapEx utilization"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "10 Marks", text: "Distinguish between Capital Budget and Revenue Budget. Explain the components of both." },
+                        { year: 2018, marks: "15 Marks", text: "Comment on the important changes introduced in the Budgeting process in recent years in India." }
+                    ]
+                },
+                "Major Crops & Cropping Patterns in Various Parts of India": {
+                    themes: ["Rice-Wheat System Dominance", "Millet Promotion (Shree Anna)", "Cash Crops vs Food Grains", "Micro-Climate Impact on Crops"],
+                    dimensionsCovered: [
+                        "Rice-wheat cropping pattern in NW India causing groundwater depletion and soil degradation",
+                        "Need for crop diversification toward pulses, oilseeds, and coarse cereals",
+                        "Promoting Millets (Shree Anna) for climate resilience and nutritional security"
+                    ],
+                    noteMakingDimensions: [
+                        "Vertical Farming & Hydroponics feasibility in Indian peri-urban belts",
+                        "Oil Palm Mission: Agro-ecological impact in NE India and Andaman Islands",
+                        "Agro-Climatic Zones based crop planning enforcement",
+                        "GI Tagged Agricultural Products export potential"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "15 Marks", text: "What are the present challenges before crop diversification? How do emerging technologies provide an opportunity?" },
+                        { year: 2020, marks: "15 Marks", text: "How far has the Green Revolution contributed to environmental degradation in irrigated regions?" }
+                    ]
+                },
+                "Different Types of Irrigation & Irrigation Systems": {
+                    themes: ["Canal vs Groundwater Irrigation", "Micro-Irrigation (Drip & Sprinkler)", "Pradhan Mantri Krishi Sinchayee Yojana", "Water Use Efficiency"],
+                    dimensionsCovered: [
+                        "Over-exploitation of groundwater due to subsidized power for tube-wells",
+                        "Micro-irrigation benefits under PMKSY ('Per Drop More Crop')",
+                        "Traditional water harvesting systems revival (Ahar Pyne, Johads, Stepwells)"
+                    ],
+                    noteMakingDimensions: [
+                        "Solar Pump Adoption (PM-KUSUM): Water extraction risk vs clean energy",
+                        "Micro-irrigation Automation & Precision fertigation",
+                        "Command Area Development & Water Management (CADWM) integration gaps",
+                        "Inter-linking of Rivers (ILR): Ken-Betwa model ecological and social evaluation"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "10 Marks", text: "How and to what extent would Micro-Irrigation help in solving India's water crisis?" },
+                        { year: 2017, marks: "15 Marks", text: "Elucidate the needle of water-use efficiency in Indian agriculture and measures to improve it." }
+                    ]
+                },
+                "Storage, Transport & Marketing of Agricultural Produce": {
+                    themes: ["APMC Acts & e-NAM", "Cold Chain & Logistics Deficit", "Essential Commodities Act", "Contract Farming & FPOs"],
+                    dimensionsCovered: [
+                        "e-NAM (National Agriculture Market) inter-state trading bottlenecks",
+                        "Post-harvest losses due to inadequate cold storage supply chains",
+                        "Role of Farmer Producer Organizations (FPOs) in bargaining power"
+                    ],
+                    noteMakingDimensions: [
+                        "Agriculture Infrastructure Fund (AIF) mobilization at Gram Panchayat level",
+                        "Private Mandis and Direct Purchase frameworks post-farm laws repeal",
+                        "Digital Agri Stack and AgTech startup ecosystem for market linkages",
+                        "Warehousing Development and Regulatory Authority (WDRA) negotiable receipts"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "10 Marks", text: "How does e-Technology help farmers in production and marketing of agricultural produce?" },
+                        { year: 2018, marks: "15 Marks", text: "What are the main bottlenecks in downstream and upstream process of agricultural marketing in India?" }
+                    ]
+                },
+                "Issues Related to Direct & Indirect Farm Subsidies & MSP": {
+                    themes: ["MSP Legal Guarantee Demand", "PM-KISAN Cash Transfer", "WTO Amber/Green Box Constraints", "Fertilizer Subsidies & Nano Urea"],
+                    dimensionsCovered: [
+                        "Distortionary impact of urea subsidy leading to soil NPK imbalance",
+                        "WTO Peace Clause and Indian farm subsidy limits debate",
+                        "Minimum Support Price (MSP) open-ended procurement benefit concentrated in few states"
+                    ],
+                    noteMakingDimensions: [
+                        "Nano Urea & Nano DAP efficiency, yield impact, and adoption barriers",
+                        "PM-KISAN direct income support vs input price subsidies comparison",
+                        "Decentralized Procurement (DCP) scheme expansion for non-paddy/wheat crops",
+                        "Rationalizing Power Subsidies via direct benefit transfer to farmers"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "What are the direct and indirect subsidies provided to farm sector in India? Discuss issues raised by WTO." },
+                        { year: 2023, marks: "15 Marks", text: "What are the main constraints in establishing legal status to Minimum Support Price (MSP) in India?" }
+                    ]
+                },
+                "Public Distribution System: Objectives, Functioning & Limitations": {
+                    themes: ["PDS Modernization & Aadhaar Seeding", "One Nation One Ration Card (ONORC)", "Food Corporation of India (FCI) Reforms", "Buffer Stocking Norms"],
+                    dimensionsCovered: [
+                        "Shanta Kumar Committee recommendations on FCI restructuring and PDS targeting",
+                        "One Nation One Ration Card (ONORC) enabling food security for migrant labor",
+                        "Economic cost of foodgrain handling and storage losses by FCI"
+                    ],
+                    noteMakingDimensions: [
+                        "Smart PDS and GPS tracking of grain transport vehicles",
+                        "Grain Bank at Village level for extreme remote/tribal belts",
+                        "Cash Transfers in lieu of foodgrains: UT experiments evaluation",
+                        "Open Market Sale Scheme (OMSS) for controlling food inflation"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "What are the reformative steps taken by the government to digitize Public Distribution System in India?" },
+                        { year: 2019, marks: "15 Marks", text: "PDS has undergone major structural transformations. Highlight key features and remaining gaps." }
+                    ]
+                },
+                "Food Processing & Related Industries in India": {
+                    themes: ["Mega Food Parks & PLI Scheme", "Upstream & Downstream Requirements", "Supply Chain Infrastructure", "Export Potential of Processed Foods"],
+                    dimensionsCovered: [
+                        "Scope and significance of food processing industry in driving farm incomes",
+                        "Upstream (raw material quality, seasonal availability) and downstream (distribution, marketing) bottlenecks",
+                        "PM Sampada Yojana and Mega Food Parks status review"
+                    ],
+                    noteMakingDimensions: [
+                        "Production Linked Incentive (PLI) Scheme for Food Processing Sector",
+                        "Food Safety and Standards Authority of India (FSSAI) quality standards enforcement",
+                        "SME and Cottage Food Processing units aggregation under PM-FME scheme",
+                        "Irradiation and Cold Chain Tech for reducing perishable export rejections"
+                    ],
+                    pyqs: [
+                        { year: 2020, marks: "10 Marks", text: "Elucidate the obstacles faced by the food processing sector in India. How can rural youth be encouraged?" },
+                        { year: 2017, marks: "15 Marks", text: "What are the factors responsible for the location of food processing industries in India?" }
+                    ]
+                },
+                "Land Reforms in India": {
+                    themes: ["Abolition of Zamindari", "Tenancy Reforms & Land Ceilings", "Bhoodan Movement Evaluation", "Digital Land Records (DILRMP)"],
+                    dimensionsCovered: [
+                        "Success of Zamindari abolition vs partial failure of tenancy reforms and land ceilings",
+                        "Land fragmentation consequences on farm productivity",
+                        "Digitalization of Land Records (DILRMP) and SVAMITVA scheme for clear titles"
+                    ],
+                    noteMakingDimensions: [
+                        "Model Land Leasing Act: Safeguard for landowners and tenant rights",
+                        "Conclusive Land Titling vs Presumptive Titling framework",
+                        "Land Pooling Models (Amaravati/Gujarat) vs Land Acquisition Act 2013",
+                        "Benami Property Transactions Act impact on land holdings"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "10 Marks", text: "Discuss the main objectives and achievements of land reforms in India. Why land ceiling laws failed in most states?" },
+                        { year: 2013, marks: "10 Marks", text: "Establish the relationship between land reforms, agricultural productivity, and poverty elimination." }
+                    ]
+                },
+                "Effects of Liberalization on the Economy & Industrial Policy": {
+                    themes: ["Post-1991 LPG Reforms Review", "De-industrialization vs Manufacturing Shift", "National Industrial Policy & Make in India", "PLI Schemes"],
+                    dimensionsCovered: [
+                        "Impact of 1991 LPG reforms on industrial growth, foreign investment, and service sector dominance",
+                        "Failure of manufacturing sector to reach 25% GDP target",
+                        "Production Linked Incentive (PLI) schemes across 14 champion sectors"
+                    ],
+                    noteMakingDimensions: [
+                        "Industrial Corridor Development (NICDC) progress and last-mile connectivity",
+                        "National Single Window System (NSWS) for regulatory clearances",
+                        "Foreign Direct Investment (FDI) inflows trend: Shift from greenfield to brownfield",
+                        "Special Economic Zones (SEZs) restructuring into DESH framework"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Faster economic growth requires an increased share of manufacturing in GDP. Comment in the context of MSMEs." },
+                        { year: 2017, marks: "15 Marks", text: "Examine the developments in industrial policy post-1991 and their impact on small-scale industries." }
+                    ]
+                },
+                "Infrastructure: Energy, Ports, Roads, Airports, Railways": {
+                    themes: ["Renewable Energy Targets & Grid", "National Monetization Pipeline (NMP)", "PM Gati Shakti Master Plan", "Public-Private Partnerships (PPP Models)"],
+                    dimensionsCovered: [
+                        "PM Gati Shakti for removing inter-departmental infrastructure planning silos",
+                        "Public-Private Partnership models (BOT, HAM, EPC) evaluation in highway sector",
+                        "National Monetization Pipeline (NMP) for unlocking brownfield asset value"
+                    ],
+                    noteMakingDimensions: [
+                        "DISCOM Financial Distress (UDAY scheme failure and Rdss restructuring)",
+                        "Dedicated Freight Corridors (DFC) impact on logistics cost reduction",
+                        "National Green Hydrogen Mission and energy storage infrastructure",
+                        "Port-led Development (Sagarmala) and Inland Waterways (NW-1) progress"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Examine the role of PM Gati Shakti National Master Plan in achieving integrated infrastructure development." },
+                        { year: 2022, marks: "15 Marks", text: "What are the key features of the National Monetization Pipeline (NMP)? Discuss potential risks." }
+                    ]
+                },
+                "Investment Models": {
+                    themes: ["PPP Models (BOT, TOT, HAM)", "National Investment & Infrastructure Fund", "Foreign Portfolio vs Direct Investment", "REITs & InvITs"],
+                    dimensionsCovered: [
+                        "Comparison of Build-Operate-Transfer (BOT), Hybrid Annuity Model (HAM), and Engineering-Procurement-Construction (EPC)",
+                        "Role of Real Estate Investment Trusts (REITs) and Infrastructure Investment Trusts (InvITs) in retail capital mobilization"
+                    ],
+                    noteMakingDimensions: [
+                        "Swiss Challenge Method in public procurement risks and transparency",
+                        "Viability Gap Funding (VGF) scheme for social and physical infrastructure",
+                        "Development Finance Institutions (DFIs) revival: NaBFID role",
+                        "ESG (Environmental, Social, Governance) Investing trends in infrastructure"
+                    ],
+                    pyqs: [
+                        { year: 2020, marks: "10 Marks", text: "Explain the Hybrid Annuity Model (HAM) adopted in road infrastructure projects." },
+                        { year: 2017, marks: "10 Marks", text: "Examine the utility of Public Private Partnership (PPP) model in infrastructure development in India." }
+                    ]
+                },
+                "Science & Technology: Developments & Everyday Applications": {
+                    themes: ["Indigenization of Technology", "Space Missions (Gaganyaan, Chandrayaan)", "Nuclear Energy Program", "Supercomputing Mission"],
+                    dimensionsCovered: [
+                        "Gaganyaan mission objectives and strategic importance for space ecosystem",
+                        "Indigenization of defense tech (Tejas, INS Vikrant, BrahMos) and defense exports",
+                        "Three-stage nuclear power program status and thorium utilization"
+                    ],
+                    noteMakingDimensions: [
+                        "Small Modular Reactors (SMRs) for clean energy transition",
+                        "National Supercomputing Mission (NSM) and PARAM series application",
+                        "Technology Readiness Level (TRL) framework in Indian R&D",
+                        "Commercialization of ISRO tech via IN-SPACe and NewSpace India Ltd (NSIL)"
                     ],
                     pyqs: [
                         { year: 2024, marks: "10 Marks", text: "Highlight the key objectives and strategic importance of India's Gaganyaan space mission." },
+                        { year: 2022, marks: "10 Marks", text: "What is the present status and future prospects of nuclear energy in India?" }
+                    ]
+                },
+                "Awareness in IT, Space, Computers, Robotics, Nano-tech, Bio-tech": {
+                    themes: ["Artificial Intelligence & Deep Learning", "Biotechnology & Genome India Project", "Nanotechnology in Medicine/Agri", "Quantum Computing Mission"],
+                    dimensionsCovered: [
+                        "Artificial Intelligence applications in solving administrative and public service issues",
+                        "Genome India Project for mapping genetic diversity and precision healthcare",
+                        "Nanotechnology applications in target drug delivery and nano-fertilizers"
+                    ],
+                    noteMakingDimensions: [
+                        "National Quantum Mission (NQM) pillars and cryptographic implications",
+                        "Generative AI & LLMs: Regulatory frameworks and copyright/bias challenges",
+                        "CRISPR-Cas9 Gene Editing regulatory bio-safety guidelines",
+                        "6G Telecom Technology roadmap and Terahertz spectrum allocation"
+                    ],
+                    pyqs: [
                         { year: 2023, marks: "15 Marks", text: "Introduce the concept of Artificial Intelligence (AI). How can AI help in solving public administrative challenges?" },
-                        { year: 2022, marks: "10 Marks", text: "What are the key features of India's draft National Cyber Security Strategy?" }
+                        { year: 2020, marks: "15 Marks", text: "What are the key features of the National Biotechnology Development Strategy?" }
+                    ]
+                },
+                "Issues Relating to Intellectual Property Rights (IPR)": {
+                    themes: ["Indian Patent Act Section 3(d)", "Compulsory Licensing", "Traditional Knowledge Digital Library (TKDL)", "National IPR Policy"],
+                    dimensionsCovered: [
+                        "Section 3(d) of Indian Patents Act preventing evergreening of pharmaceutical patents",
+                        "Compulsory licensing provisions under WTO TRIPS agreement for public health emergencies",
+                        "Protection of traditional knowledge (TKDL) against bio-piracy"
+                    ],
+                    noteMakingDimensions: [
+                        "Geographical Indications (GI) commercial monetization and enforcement gaps",
+                        "Plant Variety Protection and Farmers' Rights Act (PPV&FR) vs seed MNCs",
+                        "AI-Generated Intellectual Property ownership debate",
+                        "Standard Essential Patents (SEPs) and FRAND licensing disputes in telecom"
+                    ],
+                    pyqs: [
+                        { year: 2019, marks: "15 Marks", text: "Examine the salient features of the National IPR Policy 2016 and challenges in its implementation." },
+                        { year: 2014, marks: "10 Marks", text: "In a world of globalization, IPR assumes special importance. Discuss the main features of TRIPS agreement." }
+                    ]
+                },
+                "Conservation, Environmental Pollution & Degradation": {
+                    themes: ["Air Pollution & Stubble Burning", "Ramsar Wetlands Protection", "E-Waste & Single-Use Plastic Rules", "River Pollution & Ganga Rejuvenation"],
+                    dimensionsCovered: [
+                        "CAQM measures for air pollution control in Delhi-NCR and stubble burning alternatives",
+                        "Ramsar Conservation status of wetlands and threat from encroachment",
+                        "Extended Producer Responsibility (EPR) under Plastic and E-Waste Management Rules"
+                    ],
+                    noteMakingDimensions: [
+                        "Microplastics Hazards in marine and human food chains",
+                        "Soil Health Degradation: Salinization, erosion, and organic carbon loss",
+                        "Noise & Light Pollution ecological impacts",
+                        "Decarbonization of Heavy Industry (Steel, Cement) via Green Steel"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Comment on the National Wetland Conservation Programme initiated by India and Ramsar site protection." },
+                        { year: 2022, marks: "10 Marks", text: "Discuss the key features of the Single-Use Plastic Ban guidelines in India and implementation challenges." }
+                    ]
+                },
+                "Environmental Impact Assessment (EIA)": {
+                    themes: ["EIA Process & Public Hearing", "Draft EIA Notification 2020 Critiques", "Post-Facto Environmental Clearance Issue", "Ecologically Sensitive Zones (ESZ)"],
+                    dimensionsCovered: [
+                        "Purpose of Environmental Impact Assessment (EIA) in sustainable infrastructure planning",
+                        "Criticism of Draft EIA Notification 2020 regarding ex-post facto clearances and reduced public consultation period",
+                        "Judicial intervention on Western Ghats Ecologically Sensitive Area enforcement"
+                    ],
+                    noteMakingDimensions: [
+                        "Strategic Environmental Assessment (SEA) vs Project-level EIA",
+                        "EIA Capacity Deficit: Independent EIA authority requirement",
+                        "Disaster Risk Assessment integration into standard EIA guidelines",
+                        "Public Hearing Manipulation and Gram Sabha consent bypass"
+                    ],
+                    pyqs: [
+                        { year: 2020, marks: "10 Marks", text: "Explain the purpose of Environmental Impact Assessment (EIA) in sustainable project implementation." },
+                        { year: 2016, marks: "10 Marks", text: "EIA is a tool for sustainable development. Discuss key steps in the EIA process." }
+                    ]
+                },
+                "Disaster & Disaster Management": {
+                    themes: ["NDMA Framework & Disaster Act 2005", "Urban Floods & Cyclones Preparedness", "Landslides & GLOF Preparedness", "Sendai Framework Implementation"],
+                    dimensionsCovered: [
+                        "Shift from reactive relief to proactive Disaster Risk Reduction (DRR) under NDMA Act",
+                        "Urban flooding causes and management strategies in major metropolitan cities",
+                        "Early Warning Systems (EWS) success in minimizing tropical cyclone casualties (Cyclone Biparjoy, Odisha model)"
+                    ],
+                    noteMakingDimensions: [
+                        "Sendai Framework for Disaster Risk Reduction 4 Priorities implementation",
+                        "Disaster Resilient Infrastructure (CDRI initiative) standards",
+                        "Community-Based Disaster Risk Management (CBDRM) training",
+                        "Glacial Lake Outburst Flood (GLOF) monitoring network expansion"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Discuss the causes and management strategies for urban flooding in major Indian cities." },
+                        { year: 2021, marks: "15 Marks", text: "Describe the various steps taken for Disaster Risk Reduction in India in line with Sendai Framework." }
+                    ]
+                },
+                "Linkages Between Development and Spread of Extremism": {
+                    themes: ["Left-Wing Extremism (LWE / Naxalism)", "Development Deficit vs Security Strategy", "SAMADHAN Strategy Evaluation", "Tribal Land Alienation"],
+                    dimensionsCovered: [
+                        "Socio-economic factors (land alienation, forest rights denial) fueling Left-Wing Extremism",
+                        "Security-development synergy: SAMADHAN strategy and Greyhounds operations",
+                        "Shrinking geographical footprint of Red Corridor in Central India"
+                    ],
+                    noteMakingDimensions: [
+                        "Surrender and Rehabilitation Policy effectiveness for ex-maoists",
+                        "Maoist Cyber Capabilities & Front Organizations tracking",
+                        "Mining Royalties & District Mineral Foundation (DMF) utilization in LWE districts",
+                        "Development projects (roads, mobile towers) as targets of insurgent attacks"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "Discuss the trends in Left Wing Extremism in India and government's multi-pronged approach to combat it." },
+                        { year: 2020, marks: "10 Marks", text: "Left Wing Extremism is showing a downward trend, but still affects large parts of the country. Analyze." }
+                    ]
+                },
+                "Role of External State & Non-State Actors in Internal Security": {
+                    themes: ["Cross-Border Terrorism & Proxy War", "Insurgency in North-East", "State-Sponsored Cyber Attacks", "Non-State Terror Outfits"],
+                    dimensionsCovered: [
+                        "Cross-border terrorism proxy war dynamics in Jammu & Kashmir",
+                        "External state support (funding, arms, safe havens) to North-East insurgent groups",
+                        "State-sponsored cyber espionage and infrastructure hacking"
+                    ],
+                    noteMakingDimensions: [
+                        "Drones Payload Drop across Western borders: Arms and narcotics dropping",
+                        "Private Military Companies (PMCs) and mercenarism in regional conflict zones",
+                        "Foreign Influence Operations & Fake News spreading via state actors",
+                        "Maritimes Non-State Threats: Piracy and armed sea robbery"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "Analyze the role of external state and non-state actors in creating internal security challenges in border states." },
+                        { year: 2019, marks: "15 Marks", text: "Cross-border terrorism is a major internal security threat. Discuss measures to counter state-sponsored terror." }
+                    ]
+                },
+                "Challenges to Internal Security Through Communication Networks": {
+                    themes: ["Cyber Warfare & Critical Infrastructure", "Social Media Radicalization & Fake News", "Deepfakes & Synthetic Media", "Darknet & Encrypted Platforms"],
+                    dimensionsCovered: [
+                        "Use of social media for radicalization, communal incitement, and fake news propagation",
+                        "Cyber vulnerabilities in critical national infrastructure (power grids, banking, nuclear facilities)",
+                        "Draft National Cyber Security Strategy pillars"
+                    ],
+                    noteMakingDimensions: [
+                        "Deepfakes in Political Warfare: Election security threats",
+                        "End-to-End Encryption vs Law Enforcement Traceability Debate",
+                        "CERT-In Guidelines on mandatory 6-hour cyber incident reporting",
+                        "Cognitive Domain Warfare & Behavioral Manipulation via Big Data"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "15 Marks", text: "What are the internal security challenges presented by smart devices and cyber vulnerabilities?" },
+                        { year: 2021, marks: "10 Marks", text: "Discuss the role of social media in internal security threats and measures required to regulate it." }
+                    ]
+                },
+                "Basics of Cyber Security, Money Laundering & Prevention": {
+                    themes: ["PMLA Act & ED Powers", "Cryptocurrency Money Laundering Risks", "FATF Standards Compliance", "Cyber Crime Mitigation"],
+                    dimensionsCovered: [
+                        "Prevention of Money Laundering Act (PMLA) provisions and Enforcement Directorate (ED) powers",
+                        "Use of Cryptocurrencies and Darknet marketplaces for money laundering and terror financing",
+                        "Financial Action Task Force (FATF) standards compliance"
+                    ],
+                    noteMakingDimensions: [
+                        "Trade-Based Money Laundering (TBML) detection mechanisms",
+                        "Ransomware-as-a-Service (RaaS) targeted at healthcare and financial institutions",
+                        "Central Bank Digital Currency (e-Rupee) as counter to crypto illicit flows",
+                        "Indian Cyber Crime Coordination Centre (I4C) functional evaluation"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "Discuss the money laundering process through crypto-assets and measures required to curb it." },
+                        { year: 2021, marks: "15 Marks", text: "Explain the nexus between organized crime, money laundering, and terror financing." }
+                    ]
+                },
+                "Security Challenges in Border Areas & Management": {
+                    themes: ["Border Fencing & Smart Borders (CIBMS)", "Integrated Check Posts (ICPs)", "Cross-Border Smuggling (Narcotics)", "Maritime Border Security"],
+                    dimensionsCovered: [
+                        "Border security challenges along porous international borders (Indo-Myanmar, Indo-Bangladesh)",
+                        "Comprehensive Integrated Border Management System (CIBMS) and smart fencing",
+                        "Narcotics trafficking via Golden Crescent and Golden Triangle routes affecting border youth"
+                    ],
+                    noteMakingDimensions: [
+                        "Vibrant Villages Programme: Preventing border village depopulation",
+                        "Tri-Service Coastal Security Command integration post-26/11",
+                        "Enclave Exchange settlements and lingering boundary disputes",
+                        "Tunneling technology detection across J&K border"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "15 Marks", text: "Analyze the security challenges along India's international borders and measures taken to overcome them." },
+                        { year: 2020, marks: "15 Marks", text: "Border management is a complex task. Discuss the challenges in managing the porous Indo-Myanmar border." }
+                    ]
+                },
+                "Various Security Forces & Agencies and Their Mandate": {
+                    themes: ["CAPFs (BSF, CRFP, CISF, ITBP)", "Chief of Defence Staff (CDS) & Theater Commands", "Intelligence Agencies (IB, RAW)", "National Security Council (NSCS)"],
+                    dimensionsCovered: [
+                        "Role and jurisdiction extension of Border Security Force (BSF)",
+                        "Chief of Defence Staff (CDS) mandate in bringing tri-service synergy and theaterization",
+                        "CAPFs attrition rates, difficult working conditions, and modernization deficit"
+                    ],
+                    noteMakingDimensions: [
+                        "Integrated Theatre Commands Architecture: Air Defence, Maritime, Land commands",
+                        "Coordination mechanism between State Police, CAPFs, and Armed Forces",
+                        "National Security Strategy (NSS) document formulation imperative",
+                        "Defense Procurement Procedure (DAP 2020) Make-in-India drive"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "Discuss the mandate of the Chief of Defence Staff (CDS) in bringing jointness to the Indian Armed Forces." },
+                        { year: 2019, marks: "10 Marks", text: "Highlight the role and operational challenges faced by Central Armed Police Forces (CAPFs)." }
                     ]
                 }
             },
             "GS Paper 4: Ethics, Integrity & Aptitude": {
-                "Ethics & Human Interface": {
-                    themes: ["Conscience & Guidance", "Determinants of Ethics", "Public Administration Values"],
+                "Ethics and Human Interface: Essence, Determinants & Consequences": {
+                    themes: ["Determinants of Ethics (Action, Intent, Circumstance)", "Ethics in Public vs Private Relationships", "Consequences of Ethics in Human Action", "Moral Ethics Foundations"],
                     dimensionsCovered: [
-                        "Moral conscience as a guide during administrative dilemmas",
-                        "Role of ethics in public life and governance promotion",
-                        "Distinction between duty, ethics, and moral accountability"
+                        "Distinction between ethics, morality, values, and legality",
+                        "Role of ethics in ensuring long-term institutional trust and social capital",
+                        "Determinants of ethical conduct: Individual conscience vs societal pressure"
                     ],
                     noteMakingDimensions: [
-                        "Algorithmic Ethics & AI Bias: Ethical dilemmas in automated welfare distribution",
-                        "Whistleblower Protection vs Official Secrecy: Conscience vs legal NDAs in governance",
-                        "Environmental Ethics: Anthropocentrism vs Ecocentrism in project clearances",
-                        "Crisis Leadership Ethics: Balancing transparency vs panic prevention during emergencies"
+                        "Deontological (Duty-based) vs Teleological (Consequence-based) ethics frameworks",
+                        "Ethics in Private Life vs Ethics in Professional Life conflicts",
+                        "Situational Ethics: Dilemmas during emergencies and administrative discretion",
+                        "Environmental Ethics: Anthropocentrism vs Ecocentrism"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "10 Marks", text: "What does ethics seek to promote in human life? How is it necessary in public administration?" },
+                        { year: 2020, marks: "10 Marks", text: "Discuss the determinants and consequences of ethical human action with examples." }
+                    ]
+                },
+                "Human Values: Lessons from Lives of Leaders, Reformers & Teachers": {
+                    themes: ["Role of Family, Society & Educational Institutions", "Values from Gandhian Thought", "Lessons from Swami Vivekananda, Buddha, Kabir", "Inculcation of Values"],
+                    dimensionsCovered: [
+                        "Role of parents and primary school teachers in value inculcation during childhood",
+                        "Relevance of Gandhian Seven Deadly Sins in modern public administration",
+                        "Lessons from lives of reformers (Raja Ram Mohan Roy, BR Ambedkar) in social equity"
+                    ],
+                    noteMakingDimensions: [
+                        "Erosion of Values in Modern Digital Society: Value education frameworks",
+                        "Constitutional Values as foundational moral anchor for citizens",
+                        "Lessons from Global Leaders (Nelson Mandela, Martin Luther King Jr)",
+                        "Corporate Ethics lessons from ethical business pioneers"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "Wisdom lies in knowing what to reckon with and what to dispense with. Discuss in public service context." },
+                        { year: 2021, marks: "10 Marks", text: "Educating the mind without educating the heart is no education at all. Discuss in present scenario." }
+                    ]
+                },
+                "Attitude: Content, Structure, Function & Relation to Thought": {
+                    themes: ["CAB Model of Attitude (Cognitive, Affective, Behavioral)", "Attitude Formation & Change", "Persuasion & Social Influence", "Moral & Political Attitudes"],
+                    dimensionsCovered: [
+                        "Role of attitude in shaping civil service performance and public orientation",
+                        "Persuasion tools used in public welfare campaigns (Swachh Bharat, Beti Bachao)",
+                        "Differentiating moral attitudes from general social attitudes"
+                    ],
+                    noteMakingDimensions: [
+                        "Cognitive Dissonance in Bureaucracy: Handling policy decisions opposing personal beliefs",
+                        "Nudge Theory (Thaler) application in behavioral attitude change",
+                        "Political Polarization and its impact on civil service neutrality attitude",
+                        "Bureaucratic Apathy: Transforming negative administrative attitudes"
+                    ],
+                    pyqs: [
+                        { year: 2022, marks: "10 Marks", text: "Attitude is a little thing that makes a big difference. Discuss in the context of civil servants." },
+                        { year: 2020, marks: "10 Marks", text: "How does persuasion help in bringing social change? Illustrate with examples from public health drives." }
+                    ]
+                },
+                "Aptitude & Foundational Values for Civil Service": {
+                    themes: ["Integrity, Impartiality & Non-Partisanship", "Objectivity & Dedication to Public Service", "Empathy, Compassion & Tolerance", "Anonymity & Neutrality"],
+                    dimensionsCovered: [
+                        "Integrity as absolute adherence to moral values even when unwatched",
+                        "Empathy and compassion towards weaker sections as non-negotiable core values",
+                        "Objectivity in administrative decision-making based on evidence and data"
+                    ],
+                    noteMakingDimensions: [
+                        "Conflict between Neutrality and Commitment to Constitutional Goals",
+                        "Intellectual Honesty in policy advising to political executives",
+                        "Measuring Aptitude: Psychometric testing in civil services selection",
+                        "Courage of Conviction: Resisting illegal political directives"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "10 Marks", text: "Discuss the importance of empathy and compassion towards weaker sections in civil service." },
+                        { year: 2021, marks: "10 Marks", text: "Identify the foundational values required for a public servant. How do they ensure administrative integrity?" }
+                    ]
+                },
+                "Emotional Intelligence: Concepts & Utilities in Governance": {
+                    themes: ["Goleman's 5 Components of EI", "EI in Conflict Resolution", "EI under Crisis & High Stress", "Developing Emotional Quotient (EQ)"],
+                    dimensionsCovered: [
+                        "Role of Emotional Intelligence in handling violent public protests and agitations",
+                        "Using self-awareness and self-regulation to prevent burnout among ground officers",
+                        "EI in building team synergy and inter-departmental collaboration"
+                    ],
+                    noteMakingDimensions: [
+                        "EI in Disaster Management: Balancing empathy with quick executive decision-making",
+                        "EQ vs IQ debate in civil service leadership effectiveness",
+                        "Training Modules for EQ development in Lal Bahadur Shastri National Academy of Administration (LBSNAA)",
+                        "EI in Police-Public interaction improvement"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "10 Marks", text: "How can Emotional Intelligence help a civil servant in handling public agitations effectively?" },
+                        { year: 2019, marks: "10 Marks", text: "What is Emotional Intelligence and how can it be developed in public servants?" }
+                    ]
+                },
+                "Contributions of Moral Thinkers & Philosophers": {
+                    themes: ["Western Philosophers (Socrates, Plato, Aristotle, Kant, Mill)", "Indian Philosophers (Kautilya, Buddha, Shankara, Vivekananda)", "Utilitarianism vs Deontology", "Virtue Ethics"],
+                    dimensionsCovered: [
+                        "Socratic method and 'unexamined life is not worth living' in public accountability",
+                        "Kantian Categorical Imperative (Duty for duty's sake) application in ethics",
+                        "Utilitarianism ('Greatest good for greatest number') limitations in minority rights protection",
+                        "Kautilya's Arthashastra views on corruption and administrative oversight"
+                    ],
+                    noteMakingDimensions: [
+                        "Rawlsian Theory of Justice (Difference Principle & Veil of Ignorance) in welfare state design",
+                        "Thirukkural moral teachings on governance and leadership",
+                        "Virtue Ethics (Aristotle) focus on character development over rules",
+                        "Stoicism principles for emotional stability in high-pressure leadership"
+                    ],
+                    pyqs: [
+                        { year: 2023, marks: "10 Marks", text: "Explain John Rawls' Theory of Justice and its relevance in modern Indian welfare state." },
+                        { year: 2020, marks: "10 Marks", text: "Condemn the fault, not the actor. (Mahatma Gandhi). Discuss its ethical significance." }
+                    ]
+                },
+                "Public/Civil Service Values & Ethics in Public Administration": {
+                    themes: ["Ethical Dilemmas in Governance", "Sources of Ethical Guidance (Conscience, Laws, Rules)", "Ethical Governance Concept", "International Ethics"],
+                    dimensionsCovered: [
+                        "Moral Conscience as a guiding beacon when laws and rules are ambiguous or silent",
+                        "Ethical dilemmas in balancing development projects vs tribal rights/environment",
+                        "Differentiating Code of Conduct (procedural rules) vs Code of Ethics (moral values)"
+                    ],
+                    noteMakingDimensions: [
+                        "Ethical Issues in International Relations: Vaccine nationalism, refugee denial",
+                        "Funding Ethics: Philanthropy, corporate lobbying, and foreign aid conditionalities",
+                        "Whistleblower Protection Ethics: Public interest vs institutional secrecy",
+                        "Algorithmic Ethics & AI Bias in automated government decision-making"
                     ],
                     pyqs: [
                         { year: 2024, marks: "10 Marks", text: "What do you understand by 'moral conscience'? How does it guide public servants during ethical dilemmas?" },
-                        { year: 2023, marks: "10 Marks", text: "What does ethics seek to promote in human life? How is it necessary in public administration?" },
-                        { year: 2022, marks: "10 Marks", text: "Wisdom lies in knowing what to reckon with and what to dispense with. Discuss in public service context." }
+                        { year: 2023, marks: "10 Marks", text: "Distinguish between 'Code of Conduct' and 'Code of Ethics' with suitable real-world examples." }
+                    ]
+                },
+                "Probity in Governance: Concept, Transparency & Anti-Corruption": {
+                    themes: ["Concept of Public Service & Probity", "Information Sharing & Transparency", "Work Culture & Quality of Service Delivery", "Utilization of Public Funds & Challenges"],
+                    dimensionsCovered: [
+                        "Probity as active integrity in ensuring public money is utilized with maximum efficiency",
+                        "Work culture improvement in government offices: Bureaucratic red-tape elimination",
+                        "Central Vigilance Commission (CVC) and Lokpal institutional role in curbing corruption"
+                    ],
+                    noteMakingDimensions: [
+                        "Petty vs Grand Corruption: Structural causes and systemic cures",
+                        "Integrity Pacts in high-value defense and infrastructure public procurement",
+                        "Citizen's Charter effectiveness: Enforceability and compensation mechanisms",
+                        "Asset Declaration Transparency for public servants and judges"
+                    ],
+                    pyqs: [
+                        { year: 2021, marks: "10 Marks", text: "Probity in governance is an essential requirement for socio-economic development. Discuss." },
+                        { year: 2018, marks: "10 Marks", text: "Explain the concept of Probity in Governance. What measures are needed to ensure it?" }
+                    ]
+                },
+                "Ethics Case Studies Framework & Applied Scenarios": {
+                    themes: ["Conflict of Interest Scenarios", "Disaster Emergency Ethical Choices", "Corruption Pressure & Whistleblowing", "Development vs Environment Dilemma"],
+                    dimensionsCovered: [
+                        "Resolving Conflict of Interest when family members are involved in government tenders",
+                        "Handling local political pressure during illegal encroachment drive enforcement",
+                        "Balancing speed vs procedural compliance during emergency disaster relief"
+                    ],
+                    noteMakingDimensions: [
+                        "7-Step Case Study Solution Matrix: Stakeholder mapping, Options generation, Ethical Evaluation",
+                        "Media Leak vs Official Secrecy Act ethical choices",
+                        "Gender Harassment at Workplace (POSH Act) handling as District Collector",
+                        "Sub-standard Infrastructure Quality Pressure by contractor-politician nexus"
+                    ],
+                    pyqs: [
+                        { year: 2024, marks: "20 Marks (Case Study)", text: "Case Study on balancing developmental project approval against environmental degradation and tribal relocation." },
+                        { year: 2023, marks: "20 Marks (Case Study)", text: "Case Study on ethical dilemma faced by a District Collector during illegal sand mining enforcement." },
+                        { year: 2022, marks: "20 Marks (Case Study)", text: "Case Study on conflict of interest in awarding procurement tenders in public sector undertaking." }
                     ]
                 }
             }
@@ -231,10 +1395,10 @@
 
                 const paperHeader = document.createElement("details");
                 paperHeader.className = "group mb-2";
-                paperHeader.open = true;
+                paperHeader.open = false; // Closed by default for better navigation of long list
 
                 const summary = document.createElement("summary");
-                summary.className = "flex justify-between items-center font-bold text-gray-800 cursor-pointer p-2 bg-indigo-50/60 rounded hover:bg-indigo-100 text-xs";
+                summary.className = "flex justify-between items-center font-bold text-gray-800 cursor-pointer p-2 bg-indigo-50/70 rounded hover:bg-indigo-100 text-xs";
                 summary.textContent = paper;
 
                 const topicList = document.createElement("ul");
@@ -243,7 +1407,7 @@
                 Object.keys(topics).forEach(topic => {
                     const li = document.createElement("li");
                     const btn = document.createElement("button");
-                    btn.className = "text-left text-xs text-gray-700 hover:text-indigo-700 hover:bg-indigo-50 w-full p-1.5 rounded transition font-medium";
+                    btn.className = "text-left text-xs text-gray-700 hover:text-indigo-700 hover:bg-indigo-50 w-full p-1.5 rounded transition font-medium leading-tight";
                     btn.textContent = topic;
                     btn.onclick = () => renderTopicData(paper, topic);
                     li.appendChild(btn);
@@ -253,6 +1417,10 @@
                 paperHeader.appendChild(summary);
                 paperHeader.appendChild(topicList);
                 menuContainer.appendChild(paperHeader);
+            }
+            // Keep first GS Paper open on load
+            if (menuContainer.firstChild) {
+                menuContainer.firstChild.open = true;
             }
         }
 
@@ -284,7 +1452,7 @@
                 <!-- Covered Dimensions Box -->
                 <div class="mb-5 p-4 bg-blue-50/80 border border-blue-200 rounded-lg">
                     <div class="flex items-center gap-2 mb-2">
-                        <span class="bg-blue-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded">Analysis</span>
+                        <span class="bg-blue-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded">Historical Analysis</span>
                         <h3 class="text-xs font-bold text-blue-900 uppercase tracking-wide">Dimensions Covered in Past PYQs</h3>
                     </div>
                     <ul class="my-0">${coveredHtml}</ul>
@@ -329,7 +1497,11 @@
                     }
                 }
             }
+            
+            // Render filtered menu and expand matching sections
             renderMenu(filtered);
+            const detailsElements = document.querySelectorAll("#syllabusMenu details");
+            detailsElements.forEach(d => d.open = true);
         }
 
         // Initial Load
