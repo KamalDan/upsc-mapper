@@ -114,7 +114,7 @@
             ]
         };
 
-        // Render Menu
+        // Render Sidebar Menu
         const menuContainer = document.getElementById("syllabusMenu");
         for (const [paper, topics] of Object.entries(syllabusData)) {
             const paperHeader = document.createElement("details");
@@ -143,14 +143,18 @@
             menuContainer.appendChild(paperHeader);
         }
 
-        // Auto load saved key
+        function cleanKeyInput() {
+            let rawKey = document.getElementById("apiKey").value.trim();
+            return rawKey.replace(/^["'`]|["'`]$/g, '').trim();
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
             const savedKey = localStorage.getItem("gemini_api_key");
             if (savedKey) document.getElementById("apiKey").value = savedKey;
         });
 
         function saveApiKey() {
-            const key = document.getElementById("apiKey").value.trim();
+            const key = cleanKeyInput();
             if(!key) {
                 alert("Please paste an API key first.");
                 return;
@@ -159,36 +163,35 @@
             alert("API Key saved securely on your device!");
         }
 
-        const candidateModels = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
-
         async function testApiKey() {
-            const apiKey = document.getElementById("apiKey").value.trim() || localStorage.getItem("gemini_api_key");
+            const apiKey = cleanKeyInput() || localStorage.getItem("gemini_api_key");
             if (!apiKey) {
                 alert("Please paste an API Key first.");
                 return;
             }
             
-            for (let model of candidateModels) {
-                try {
-                    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ contents: [{ parts: [{ text: "Hello" }] }] })
-                    });
-                    
-                    if (res.ok) {
-                        alert(`Success! API Key is active and connected using model: ${model}`);
-                        saveApiKey();
-                        return;
-                    }
-                } catch(e) {}
+            try {
+                const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+                const data = await res.json();
+
+                if (res.ok && data.models) {
+                    alert("Success! Your Gemini API Key is authorized and working properly.");
+                    saveApiKey();
+                    return;
+                }
+
+                if (data.error) {
+                    alert(`API Connection Failed (${data.error.code}): ${data.error.message}`);
+                } else {
+                    alert(`Connection failed with HTTP Status: ${res.status}`);
+                }
+            } catch (err) {
+                alert("Network Error: Connection blocked. Disable any ad-blockers or Brave Shields that might be blocking googleapis.com.");
             }
-            
-            alert("Connection failed. Check if your API key was copied correctly with no extra spaces.");
         }
 
         async function fetchPYQAnalysis(paper, topic) {
-            const apiKey = document.getElementById("apiKey").value.trim() || localStorage.getItem("gemini_api_key");
+            const apiKey = cleanKeyInput() || localStorage.getItem("gemini_api_key");
             if (!apiKey) {
                 alert("Please enter your Gemini API Key in the top right box and click Save.");
                 return;
@@ -208,6 +211,7 @@
             4. <h3>Chronological PYQs (2013-Present)</h3>
             Include year, marks, and exact question text. Rely entirely on your training memory.`;
 
+            const candidateModels = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
             let lastError = null;
             let success = false;
 
@@ -246,9 +250,9 @@
                 document.getElementById("loading").classList.add("hidden");
                 document.getElementById("output").innerHTML = `
                     <div class="bg-red-50 border-l-4 border-red-500 p-4 text-red-700">
-                        <h4 class="font-bold text-md">API Connection Diagnostic</h4>
-                        <p class="text-sm mt-1"><strong>Google API Response:</strong> ${lastError || "Network / CORS block"}</p>
-                        <p class="text-xs mt-2">Try clicking the green <strong>Test Key</strong> button in the top right header to confirm your key status.</p>
+                        <h4 class="font-bold text-md">API Connection Error</h4>
+                        <p class="text-sm mt-1"><strong>Google Error Message:</strong> ${lastError || "Network block / CORS issue"}</p>
+                        <p class="text-xs mt-2">Click <strong>Test Key</strong> in the header to view detailed diagnostics.</p>
                     </div>`;
                 document.getElementById("output").classList.remove("hidden");
             }
